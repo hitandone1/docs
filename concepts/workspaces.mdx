@@ -1,0 +1,119 @@
+---
+title: "Understanding Workspaces in Jetie"
+sidebarTitle: "Workspaces"
+description: "A workspace is the top-level container for all your pages, tasks, and documents in Jetie. Learn how to set up, organize, and share yours."
+---
+
+A workspace is the root of everything you do in Jetie. Every page you write, every task you track, and every document you upload lives inside a workspace. Whether you are working alone or collaborating with a large team, the workspace gives you a single, organized home for all your content.
+
+## Personal vs. Team Workspaces
+
+Jetie offers two distinct workspace types to match how you work.
+
+<CardGroup cols={2}>
+  <Card title="Personal Workspace" icon="user">
+    Owned by a single account. Ideal for personal notes, private projects, and individual task management. No other members can access it unless you explicitly invite them.
+  </Card>
+  <Card title="Team Workspace" icon="users">
+    Shared among multiple members with role-based access controls. Built for collaborative projects, shared documentation, and cross-functional task tracking.
+  </Card>
+</CardGroup>
+
+## Workspace Hierarchy
+
+Content inside a workspace follows a four-level hierarchy. Understanding this structure helps you keep large projects navigable and logically grouped.
+
+```
+Workspace
+└── Section
+    └── Page
+        └── Sub-page
+```
+
+| Level | Description |
+|---|---|
+| **Workspace** | The top-level container. You switch between workspaces from the left sidebar. |
+| **Section** | A labeled group of pages within the workspace sidebar — similar to a folder. |
+| **Page** | An individual document containing blocks, databases, or embedded files. |
+| **Sub-page** | A page nested inside another page, inheriting its parent's section context. |
+
+<Tip>
+  You can nest sub-pages as deeply as you need. For most teams, keeping hierarchies to three or four levels makes navigation easier.
+</Tip>
+
+## Switching Between Workspaces
+
+You can belong to multiple workspaces at the same time. To switch between them:
+
+<Steps>
+  <Step title="Open the workspace switcher">
+    Click your workspace name in the top-left corner of the sidebar.
+  </Step>
+  <Step title="Select a workspace">
+    All workspaces you belong to appear in the dropdown. Click any name to switch instantly.
+  </Step>
+  <Step title="Create or join a new workspace">
+    Select **Add workspace** to create a fresh workspace, or paste an invite link to join an existing team workspace.
+  </Step>
+</Steps>
+
+## Workspace Limits by Plan
+
+<Warning>
+  If you reach your workspace limit on the Free plan, you must upgrade or delete an existing workspace before creating a new one.
+</Warning>
+
+| Plan | Workspaces | Members per Workspace |
+|---|---|---|
+| **Free** | 1 | Up to 5 |
+| **Pro** | Unlimited | Up to 50 |
+| **Business** | Unlimited | Unlimited |
+
+## Members and Roles
+
+Every team workspace has a member roster visible under **Settings → Members**. When you invite someone, you assign them one of four roles.
+
+### Role Permissions
+
+| Permission | Owner | Admin | Member | Guest |
+|---|:---:|:---:|:---:|:---:|
+| Invite members | ✅ | ✅ | ❌ | ❌ |
+| Delete pages | ✅ | ✅ | ✅ | ❌ |
+| Manage billing | ✅ | ❌ | ❌ | ❌ |
+| Edit content | ✅ | ✅ | ✅ | ❌ |
+
+<Accordion title="Role descriptions">
+  - **Owner** — The workspace creator. Has full control over all settings, billing, and membership. Each workspace has exactly one Owner.
+  - **Admin** — Can manage members, configure workspace settings, and delete any page. Cannot access billing.
+  - **Member** — Can create, edit, and delete their own pages and collaborate on shared pages.
+  - **Guest** — Read-only access by default. Guests cannot edit content unless a Member or Admin explicitly grants page-level edit permissions.
+</Accordion>
+
+## Workspace Templates
+
+When you create a new workspace, Jetie offers a set of curated templates to help you hit the ground running. Templates pre-populate your workspace with sections, pages, and task databases suited to common use cases.
+
+<CardGroup cols={3}>
+  <Card title="Startup OS" icon="rocket">
+    Roadmap, OKRs, meeting notes, and a hiring tracker — everything an early-stage team needs in one workspace.
+  </Card>
+  <Card title="Personal Productivity" icon="brain">
+    Daily journal, weekly review, project backlog, and a reading list, all wired together for solo use.
+  </Card>
+  <Card title="Engineering Hub" icon="code">
+    Sprint board, architecture decision records (ADRs), runbooks, and an on-call log.
+  </Card>
+  <Card title="Product Management" icon="map">
+    Feature backlog, PRD templates, release calendar, and a feedback tracker.
+  </Card>
+  <Card title="Knowledge Base" icon="book-open">
+    Structured sections for company policies, how-to guides, and onboarding docs.
+  </Card>
+  <Card title="Blank Workspace" icon="file">
+    Start from scratch with an empty workspace and build your own structure.
+  </Card>
+</CardGroup>
+
+<Note>
+  You can apply a template to an existing workspace as well. Go to **Settings → Templates** and select **Apply template** — Jetie will add the template's sections and pages without overwriting your existing content.
+</Note>

@@ -1,0 +1,93 @@
+---
+title: "Connect Jetie to Your Favorite Apps"
+sidebarTitle: "Integrations"
+description: "Link Google Drive, Slack, Google Calendar, GitHub, Zapier, and more to bring your tools together inside the Jetie workspace."
+---
+
+Jetie integrates with the tools your team already uses — connect once and access files, events, and messages without switching tabs or losing context. All integrations are managed from a single place and use secure OAuth authorization, so your credentials are never stored by Jetie directly.
+
+## Accessing Integrations
+
+Click your workspace name in the top-left corner, select **Settings**, then click **Integrations** in the sidebar. This page lists every available integration and its current connection status.
+
+## Available Integrations
+
+<CardGroup cols={2}>
+  <Card title="Google Drive" icon="google-drive">
+    Embed and link Drive files directly inside any Jetie page. Import Google Docs as native Jetie pages with formatting preserved. Changes in Drive are reflected in your Jetie embeds automatically.
+  </Card>
+  <Card title="Slack" icon="slack">
+    Send page update notifications and @mention alerts to any Slack channel. Create Jetie tasks directly from Slack messages using the `/jetie` slash command.
+  </Card>
+  <Card title="Google Calendar" icon="calendar">
+    View upcoming events and create new calendar entries from the Jetie sidebar. Link any calendar event to a Jetie meeting notes page for instant context before and after meetings.
+  </Card>
+  <Card title="GitHub" icon="github">
+    Link GitHub issues and pull requests to Jetie tasks. Status updates — open, closed, merged — appear inline on the linked task without leaving Jetie.
+  </Card>
+  <Card title="Zapier" icon="bolt">
+    Connect Jetie to 1,000+ apps through Zapier's no-code automation platform. Trigger Zaps from page events or create Jetie pages and tasks from external app events.
+  </Card>
+  <Card title="Make (Integromat)" icon="wrench">
+    Build multi-step automation workflows between Jetie and external services using Make's visual scenario builder. Supports webhooks, scheduled triggers, and data transformations.
+  </Card>
+</CardGroup>
+
+## Connecting an Integration
+
+The general process is the same for every integration:
+
+1. Go to **Settings → Integrations**.
+2. Find the app you want to connect and click **Connect**.
+3. You are redirected to the app's authorization page.
+4. Sign in to the external app (if not already signed in) and grant Jetie the requested permissions.
+5. You are redirected back to Jetie. The integration status changes to **Connected**.
+
+### Connecting Google Drive (Step-by-Step)
+
+<Steps>
+  <Step title="Open Integrations settings">
+    Go to **Settings → Integrations** and locate the **Google Drive** card.
+  </Step>
+  <Step title="Click Connect">
+    Click the **Connect** button on the Google Drive card. A new browser window opens to Google's authorization page.
+  </Step>
+  <Step title="Choose a Google account">
+    Select the Google account that owns the Drive files you want to access. If multiple accounts are listed, choose the one used by your team.
+  </Step>
+  <Step title="Grant permissions">
+    Review the permissions Jetie is requesting — these include reading file metadata and contents, and creating files on your behalf. Click **Allow**.
+  </Step>
+  <Step title="Return to Jetie">
+    You are redirected back to Jetie automatically. The Google Drive card now shows **Connected** with your Google account name displayed.
+  </Step>
+  <Step title="Embed a Drive file">
+    Open any Jetie page, type `/drive` in a new block, and search for a file by name. Select it to embed a live preview directly on the page.
+  </Step>
+</Steps>
+
+<Tip>
+  When importing a Google Doc as a Jetie page, formatting such as headings, bold, italics, and bullet lists is preserved. Images and tables are also imported. Comments in the Google Doc are not imported.
+</Tip>
+
+## Data Sync Frequency
+
+| Integration | Sync frequency |
+|---|---|
+| Slack | Real-time |
+| GitHub | Real-time |
+| Google Calendar | Every 5 minutes |
+| Google Drive | Every 5 minutes |
+| Zapier / Make | Determined by your Zap/scenario trigger settings |
+
+## Disconnecting an Integration
+
+1. Go to **Settings → Integrations**.
+2. Find the connected app and click **Manage**.
+3. Click **Disconnect**, then confirm in the dialog.
+
+Disconnecting removes Jetie's access token for that service. Existing embeds and links on your pages remain visible but will no longer update with live data. You can reconnect at any time by going through the authorization flow again.
+
+<Note>
+  Disconnecting an integration affects the **entire workspace**, not just your personal account. Any page that embeds or syncs data from the disconnected service will stop receiving updates for all members. Notify your team before disconnecting a shared integration.
+</Note>

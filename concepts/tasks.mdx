@@ -1,0 +1,114 @@
+---
+title: "Tasks and To-Dos in Jetie"
+sidebarTitle: "Tasks"
+description: "Create, assign, and track tasks in Jetie — either as inline to-do blocks inside pages or as full records in a dedicated Task database."
+---
+
+Tasks in Jetie are first-class citizens, not an afterthought bolted onto a notes tool. You can capture a quick to-do inline on any page with a single keystroke, or model an entire project's work in a structured Task database with assignees, priorities, and multiple views. Both approaches connect to Jetie AI, so the assistant can understand your current workload and help you plan what to tackle next.
+
+## Two Ways to Create Tasks
+
+### Inline To-Do Blocks
+
+Any page can hold to-do checkboxes inline alongside your writing. This is the fastest way to capture action items as you draft notes or meeting summaries.
+
+1. On any page, type `/` to open the block menu.
+2. Select **To-do** (or type `to-do` and press `Enter`).
+3. Type the task name and press `Enter` to add the next item.
+
+Check off a task by clicking its checkbox. Completed items gain a strikethrough and can be hidden with **Filter → Hide completed**.
+
+### Task Databases
+
+For project-level work that needs assignees, due dates, priorities, and status tracking, create a dedicated Task database. Task databases support multiple views and full filtering and sorting.
+
+#### Create Your First Task Database
+
+<Steps>
+  <Step title="Add a new page">
+    Press `N` or click **+** in the sidebar to create a new page. Give it a name like "Project Tasks" or "Sprint Board."
+  </Step>
+  <Step title="Insert a database block">
+    On the new page, type `/` and select **Task database** from the block menu. Jetie creates a database pre-configured with the standard task properties.
+  </Step>
+  <Step title="Add your first task">
+    Click **+ New task** at the bottom of the table. Type the task title and press `Enter`. The new row is saved instantly.
+  </Step>
+  <Step title="Fill in task properties">
+    Click any task row to open its detail pane. Add an assignee, set a due date, choose a priority, and pick a status. All fields are optional — fill in only what is useful for your workflow.
+  </Step>
+  <Step title="Switch to your preferred view">
+    Click **+ Add view** in the top toolbar and choose **Kanban**, **Calendar**, or **List**. Each view is saved alongside the database so you can switch between them at any time.
+  </Step>
+</Steps>
+
+## Task Properties
+
+Every task record supports the following built-in properties. You can also add custom properties of any type (text, number, select, date, URL, checkbox) from the database settings.
+
+| Property | Type | Description |
+|---|---|---|
+| **Title** | Text | The name of the task. Required. |
+| **Assignee** | Person | One or more workspace members responsible for the task. |
+| **Due date** | Date | The deadline. Overdue tasks are highlighted in red. |
+| **Priority** | Select | Urgent, High, Medium, or Low. |
+| **Status** | Select | The current stage in the workflow (see below). |
+| **Tags** | Multi-select | Free-form labels for grouping and filtering. |
+
+## Task Status Workflow
+
+Tasks move through a standard four-stage workflow. You can rename stages or add custom ones in your database settings.
+
+```
+To Do  →  In Progress  →  In Review  →  Done
+```
+
+<Tip>
+  Use the Kanban view to drag tasks between status columns visually. Each column maps directly to a status value, and changes sync immediately across all views and for all members.
+</Tip>
+
+## Task Views
+
+<Tabs>
+  <Tab title="List">
+    A flat, scrollable list of all tasks sorted by your chosen property. Best for a quick overview of everything in the backlog. Supports inline editing — click any cell to update it without opening the detail pane.
+  </Tab>
+  <Tab title="Kanban Board">
+    Tasks organized into columns by status (or any other select property). Drag cards between columns to update their status. Each card shows the assignee avatar, due date, and priority badge at a glance.
+  </Tab>
+  <Tab title="Calendar">
+    Tasks with due dates plotted on a monthly or weekly calendar grid. Drag a task to reschedule it. Tasks without a due date appear in a sidebar tray.
+  </Tab>
+</Tabs>
+
+## Assigning Tasks to Teammates
+
+Assign a task to one or more team members by typing `@` followed by their name in the **Assignee** field. Jetie sends the assignee an in-app notification and, if they have email notifications enabled, an email summary.
+
+<Note>
+  Assignees must be members of the workspace to be mentioned. To assign a task to someone outside your workspace, add them as a Guest first under **Settings → Members**.
+</Note>
+
+## Filtering and Sorting Tasks
+
+Every database view supports independent filters and sort rules.
+
+- **Filter** — Click **Filter** in the toolbar and add one or more conditions (e.g., `Assignee is @you` and `Status is not Done`). Filters are saved per view.
+- **Sort** — Click **Sort** and choose a property to sort by. Stack multiple sort rules to handle ties (e.g., sort by due date, then by priority).
+- **Group by** — In Kanban and List views, click **Group** to group rows by any select property, not just status.
+
+## AI Task Decomposition
+
+When you give Jetie AI a high-level goal — for example, *"Launch the beta in Q3"* — it can automatically break that goal into a structured list of tasks and add them directly to a Task database of your choice. Each generated task includes a suggested title, description, priority, and estimated effort.
+
+<Tip>
+  Learn more about how AI Task Decomposition works, including how to review and edit the generated plan before it is committed, in the [AI Task Decomposition guide](/ai/task-decomposition).
+</Tip>
+
+## Recurring Tasks
+
+<Warning>
+  Recurring tasks are available on **Pro** and **Business** plans only. Free plan users can view recurring tasks shared with them but cannot create new ones.
+</Warning>
+
+To make a task repeat automatically, open the task detail pane and click **Recurrence**. Choose a frequency (daily, weekly, monthly, or custom), a start date, and an optional end date. When a recurring task is marked **Done**, Jetie automatically creates the next instance with the recurrence interval applied to the due date.

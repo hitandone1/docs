@@ -1,0 +1,59 @@
+---
+title: "Manage Projects End-to-End in Jetie"
+sidebarTitle: "Manage Projects"
+description: "Learn how to run a full project lifecycle in Jetie — from kickoff and task planning to milestone tracking and stakeholder reporting."
+---
+
+Jetie gives your team a single place to plan, execute, and report on projects of any size. Instead of juggling separate tools for documents, task boards, and meeting notes, you can manage every phase of a project from one interconnected workspace. This guide walks you through the complete workflow, step by step.
+
+<Tip>
+  The **Project Brief** template pre-fills sections for goals, stakeholders, success metrics, and scope. Start every project from this template to make sure nothing important gets skipped. Access it by typing `/template` on any new page and selecting **Project Brief**.
+</Tip>
+
+<Steps>
+  <Step title="Create a project page using the Project Brief template">
+    Open the sidebar and click **+ New Page**. Type `/template`, select **Project Brief**, and give your page a name that matches the project. Fill in the goal statement, key stakeholders, scope boundaries, and target completion date. This page becomes the single source of truth for everything that follows.
+  </Step>
+
+  <Step title="Add a Task database in kanban view">
+    Place your cursor below the Project Brief content and type `/database`. Choose **Kanban** as the default view. Name the database "Tasks — [Project Name]". Add properties for **Assignee**, **Due Date**, **Priority**, and **Status**. Set your status columns to **To Do**, **In Progress**, **In Review**, and **Done**.
+  </Step>
+
+  <Step title="Use AI task decomposition to generate initial tasks">
+    Click the **AI Chat** button (or press `Cmd+Shift+A` / `Ctrl+Shift+A`) while on your project page. Type a prompt such as: *"Break this project brief into actionable tasks with suggested owners and time estimates."* Review the AI's output, then click **Add to workspace** to populate your kanban board automatically. Adjust any generated tasks to fit your team's specifics.
+  </Step>
+
+  <Step title="Assign tasks to teammates and set due dates">
+    Open each task card and set the **Assignee** property to a team member. Add a **Due Date** for every task. For tasks with dependencies, add a note in the task description referencing the blocking item. You can @mention a task or teammate anywhere in the workspace to create a live link.
+  </Step>
+
+  <Step title="Create sub-pages for milestones">
+    Inside the project page, click **+ Add sub-page** for each major milestone — for example, **Milestone 1: Discovery**, **Milestone 2: Design**, **Milestone 3: Build**, and **Milestone 4: Launch**. Each milestone page can hold its own task list, notes, and deliverables, keeping work neatly scoped.
+  </Step>
+
+  <Step title="Track progress with the kanban board">
+    As work moves forward, drag task cards across the columns — **To Do → In Progress → In Review → Done**. Team members can update cards directly from any device. Use the **Filter** control to narrow the board to a specific assignee or milestone, and switch to **Table** view when you need a spreadsheet-style overview of all tasks at once.
+  </Step>
+
+  <Step title="Hold weekly syncs with Meeting Notes pages">
+    Before each weekly standup or project sync, type `/template` on a new sub-page and select **Meeting Notes**. Fill in the agenda, attendees, and decisions. After the meeting, link the notes page back to the project by typing `@` followed by your project page name anywhere in the notes — Jetie creates a two-way reference automatically.
+  </Step>
+
+  <Step title="Export a status report PDF for stakeholders">
+    When you're ready to share progress externally, open the project page, press `Cmd+Shift+E` (`Ctrl+Shift+E` on Windows/Linux), and choose **Export to PDF**. Enable the **Include sub-pages** option to bundle milestone pages and meeting notes into one document. Select your branding options — cover page, logo, and footer text — then click **Export**.
+  </Step>
+</Steps>
+
+## Tips for an Effective Project Setup
+
+<CardGroup cols={3}>
+  <Card title="Pin the project page" icon="thumbtack">
+    Right-click the project page in the sidebar and select **Pin to sidebar** so every team member can reach it in one click, no matter how deep the page tree grows.
+  </Card>
+  <Card title="Link back with @mentions" icon="at">
+    Type `@project-name` anywhere in the workspace — in another page, a task description, or a comment — to create a live link back to the project. This keeps scattered notes connected to their source.
+  </Card>
+  <Card title="Slack notifications" icon="bell">
+    Go to **Settings → Integrations → Slack** and connect your workspace. Enable task-change notifications for your project's kanban board so your team gets a Slack message whenever a card moves, is assigned, or has a due date approaching.
+  </Card>
+</CardGroup>

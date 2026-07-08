@@ -1,0 +1,100 @@
+---
+title: "Context Memory: AI That Remembers Your Projects"
+sidebarTitle: "Context Memory"
+description: "Jetie AI maintains a persistent understanding of your work so you never have to re-explain your projects in a new conversation."
+---
+
+Context Memory lets Jetie AI carry knowledge of your ongoing work from one conversation to the next. Instead of starting every chat by pasting in background context, you can dive straight into your question — the AI already knows your projects, your tasks, and the decisions your team has made. The more you work in Jetie, the more useful every AI interaction becomes.
+
+## How It Works
+
+When you save content to Jetie, the platform indexes your pages and tasks into a private vector store associated with your account. When you open an AI chat, Jetie silently retrieves the most relevant pieces of your workspace — based on the topic of your question — and includes them in the AI's context window automatically. You never see this retrieval happening; you simply get answers that reflect your actual work.
+
+Context Memory draws on the following sources:
+
+- **Page contents** — the full text of all your indexed workspace pages
+- **Task statuses** — current state of tasks assigned to or created by you
+- **Recent edits** — pages and tasks you have modified in the last 30 days
+- **Pinned pages** — any pages you have explicitly pinned to your sidebar
+- **Conversation highlights** — responses you have bookmarked from previous AI chats
+
+## Saving a Memory
+
+Not every AI response needs to be remembered forever, but when a conversation surfaces something important — a decision, a convention, a key piece of project context — you can pin it explicitly.
+
+<Steps>
+  <Step title="Find the response you want to save">
+    In any AI chat, locate the response that contains the information you want to persist.
+  </Step>
+  <Step title="Click the bookmark icon">
+    Click the **bookmark icon** in the bottom-right corner of the response card. The icon turns solid to confirm the memory has been saved.
+  </Step>
+  <Step title="Confirm the memory label">
+    Jetie auto-generates a short label for the memory based on its content. You can edit this label to make it easier to find later. Press `Enter` to confirm.
+  </Step>
+</Steps>
+
+## Viewing and Managing Memories
+
+To review, edit, or delete your saved memories:
+
+<Steps>
+  <Step title="Open Settings">
+    Click your avatar in the bottom-left corner and select **Settings**.
+  </Step>
+  <Step title="Navigate to AI → Memories">
+    In the left panel, click **AI**, then select **Memories**. You'll see a list of all saved memories with their labels, source conversations, and creation dates.
+  </Step>
+  <Step title="Manage individual memories">
+    Hover over any memory to reveal **Edit label**, **View source**, and **Delete** options. Click **Delete** to remove a single memory immediately.
+  </Step>
+  <Step title="Clear all memories">
+    To remove all saved memories at once, click **Clear all memories** at the bottom of the Memories page and confirm the action. This cannot be undone.
+  </Step>
+</Steps>
+
+## Workspace-Level Memory
+
+<Note>
+  Workspace-level memory is available on the **Business plan** only.
+</Note>
+
+On Business plans, workspace administrators can enable a shared team memory. This memory is visible to all workspace members and is designed for information that benefits everyone — team conventions, onboarding context, recurring project definitions, and terminology guides. Administrators manage team memories from **Settings → AI → Team Memory**. Individual members cannot add to or delete from the team memory unless granted admin rights.
+
+## Opting Out
+
+If you prefer that Jetie AI does not retain context between sessions, you can disable Context Memory entirely.
+
+<Steps>
+  <Step title="Open Settings">
+    Click your avatar in the bottom-left corner and select **Settings**.
+  </Step>
+  <Step title="Navigate to AI → Context Memory">
+    In the Settings panel, click **AI**, then select **Context Memory**.
+  </Step>
+  <Step title="Disable the feature">
+    Toggle **Context Memory** to **Disabled**. From this point forward, each AI chat session starts with a blank slate — the AI will only know what is present in the current conversation or page you explicitly reference.
+  </Step>
+</Steps>
+
+## Privacy
+
+<Note>
+  Jetie does not use your workspace content or AI memories to train any models. Your data is used solely to answer your queries within your own account. No content is shared with other users, other companies, or AI model providers beyond what is necessary to generate a response.
+</Note>
+
+Your personal memories are scoped to your individual user account. Other members of your workspace — including workspace administrators — cannot view your saved memories or your conversation highlights. The only exception is content you explicitly share by publishing a page or enabling Workspace-level memory as an admin.
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Does AI read all my pages automatically?">
+    Yes — Jetie indexes the content of all pages in your workspace that you have permission to view. This indexing happens in the background whenever you create or edit a page. The AI does not read pages that are outside your permission scope. Indexing makes it possible for AI Chat to answer questions about your workspace without you manually copying content into each conversation. If you want to exclude a specific page from indexing, open the page, click the **⋯** menu, and select **AI → Exclude from index**.
+  </Accordion>
+  <Accordion title="Can teammates see my AI memories?">
+    No. Personal memories — responses you bookmark in your own AI chats — are private to your user account. No other workspace member, including owners and administrators, can see them. The only shared memory is the optional Workspace-level memory that administrators configure on the Business plan, and that memory consists only of content that an admin has explicitly added.
+  </Accordion>
+  <Accordion title="How do I delete all my AI data?">
+    To permanently delete all AI data associated with your account — including your vector index, saved memories, and chat history — go to **Settings → AI → Delete all AI data** and confirm the deletion. This action is irreversible. After deletion, Context Memory will be empty and AI Chat will no longer have access to your past workspace context until Jetie re-indexes your pages, which happens automatically the next time you edit or create content.
+  </Accordion>
+</AccordionGroup>

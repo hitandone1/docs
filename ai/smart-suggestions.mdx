@@ -1,0 +1,75 @@
+---
+title: "Smart Suggestions: AI Writing Assistance"
+sidebarTitle: "Smart Suggestions"
+description: "Jetie surfaces inline AI completions, text improvement actions, and page-level tools as you write — no context-switching required."
+---
+
+Smart Suggestions bring AI assistance directly into your editing experience. As you write, Jetie watches what you type and quietly offers completions, improvements, and relevant content — surfaced inline so you never have to leave the page. Whether you want to fix a paragraph's clarity, translate a section, or generate a table of contents in one click, Smart Suggestions put those actions within arm's reach.
+
+## Triggering Suggestions
+
+There are three ways to invoke Smart Suggestions depending on what you're trying to do.
+
+### Inline Ghost Text
+
+When you pause while typing, Jetie predicts a continuation and displays it as faded grey text after your cursor. Press `Tab` to accept the suggestion and insert it as live text. Press `Escape` or keep typing to dismiss it.
+
+### AI Actions on Selected Text
+
+Select any text in your document, right-click, and hover over **AI** in the context menu to see the full list of text actions. Each action rewrites or transforms your selection in place.
+
+<Tip>
+  You can also select text and press `Cmd+Shift+A` (macOS) or `Ctrl+Shift+A` (Windows/Linux) to open the AI actions menu without reaching for the mouse.
+</Tip>
+
+### The `++` Prompt Box
+
+Type `++` at the very start of an empty block and press `Space` to open a floating prompt box. Enter any instruction — "Write a three-sentence introduction for this section" or "Create a comparison table of these two options" — and Jetie generates content directly into the block.
+
+<Tip>
+  The `++` shortcut is the fastest way to generate new content in the middle of a document. Unlike AI Chat, it inserts output exactly where your cursor is, so you never need to copy and paste.
+</Tip>
+
+## Available AI Actions on Selected Text
+
+| Action | How to trigger | What it does |
+|---|---|---|
+| **Improve writing** | Select text → right-click → AI → Improve writing | Fixes grammar, tightens phrasing, and improves overall clarity without changing the meaning |
+| **Make shorter** | Select text → right-click → AI → Make shorter | Reduces word count while preserving the core message |
+| **Make longer** | Select text → right-click → AI → Make longer | Expands the selection with additional supporting detail |
+| **Change tone** | Select text → right-click → AI → Change tone | Rewrites the selection in a chosen tone: Professional, Casual, Friendly, or Assertive |
+| **Summarize** | Select text → right-click → AI → Summarize | Condenses the selected section into a short summary, inserted as a new block below |
+| **Translate** | Select text → right-click → AI → Translate | Translates the selection into any of 30+ supported languages |
+| **Explain** | Select text → right-click → AI → Explain | Adds a plain-language explanation of the selected text as a callout block immediately below it |
+
+## Page-Level AI Actions
+
+Beyond inline suggestions, Jetie provides a set of AI actions that operate on the entire page. Find these in the **AI** button in the page toolbar at the top of any document.
+
+<CardGroup cols={3}>
+  <Card title="Summarize page" icon="align-left">
+    Generates a concise summary of the whole page and inserts it at the top as a callout block.
+  </Card>
+  <Card title="Generate table of contents" icon="list">
+    Scans all headings in the page and inserts a linked table of contents block at your cursor position.
+  </Card>
+  <Card title="Find action items" icon="circle-check">
+    Scans the page for sentences that imply tasks or commitments and lists them as a checklist block.
+  </Card>
+</CardGroup>
+
+## Turning Off Ghost Text
+
+If inline completions interrupt your flow, you can disable them without affecting other Smart Suggestions features.
+
+<Steps>
+  <Step title="Open Settings">
+    Click your avatar in the bottom-left corner and select **Settings**.
+  </Step>
+  <Step title="Go to the AI section">
+    In the left panel of Settings, click **AI**.
+  </Step>
+  <Step title="Disable inline completions">
+    Under **Inline completions**, toggle the setting to **Off**. Ghost text will no longer appear while you type. All other AI actions — right-click menu, `++` shortcut, and page-level actions — remain available.
+  </Step>
+</Steps>

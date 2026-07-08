@@ -1,0 +1,85 @@
+---
+title: "Roles and Permissions in Jetie"
+sidebarTitle: "Permissions"
+description: "Understand workspace roles, page-level permission overrides, inheritance rules, and how to restrict sensitive content in Jetie."
+---
+
+Jetie uses a two-tier permission system. Workspace roles define what a person can do across your entire workspace, while page-level overrides let you grant or restrict access on a per-page basis. Together, they give you precise control over who sees and edits what.
+
+## Workspace Roles
+
+Every workspace member is assigned one of four roles. These roles set a baseline level of access that applies across all pages unless a page-level override is in place.
+
+| Action | Owner | Admin | Member | Guest |
+|---|:---:|:---:|:---:|:---:|
+| Edit pages | ✅ | ✅ | ✅ | ❌ |
+| Delete pages | ✅ | ✅ | ✅ own pages | ❌ |
+| Invite members | ✅ | ✅ | ❌ | ❌ |
+| Manage billing | ✅ | ❌ | ❌ | ❌ |
+| Delete workspace | ✅ | ❌ | ❌ | ❌ |
+| Manage workspace settings | ✅ | ✅ | ❌ | ❌ |
+| Access restricted pages | ✅ | ✅ | Only if added | Only if added |
+
+### Role Descriptions
+
+- **Owner** — Has unrestricted access to every feature, including billing management and permanent workspace deletion. There can only be one Owner per workspace, but ownership can be transferred to another Admin.
+- **Admin** — Can manage members, adjust workspace settings, and access all pages. Admins cannot delete the workspace or manage billing.
+- **Member** — The standard role for teammates. Members can create, edit, and delete their own pages and collaborate on any page they have access to. They cannot manage members or billing.
+- **Guest** — Can only access pages explicitly shared with them. Guests are read-only by default, though page-level overrides can grant a guest comment or edit access on specific pages.
+
+<Note>
+  On the **Free plan**, you can add a maximum of **5 guests** to your workspace. Upgrade to **Pro** for up to 20 guests, or **Business** for unlimited guests. Guests do not consume a paid member seat.
+</Note>
+
+## Changing a Member's Role
+
+1. Open **Settings** from the workspace menu in the top-left corner.
+2. Click **Members** in the sidebar.
+3. Find the member whose role you want to change.
+4. Click the **role dropdown** next to their name.
+5. Select the new role. The change takes effect immediately — no confirmation email is sent to the member.
+
+<Warning>
+  Downgrading an Admin to Member removes their ability to invite new members and change workspace settings. Downgrading the Owner requires first transferring ownership to another Admin.
+</Warning>
+
+## Page-Level Permission Overrides
+
+Workspace roles set the default, but you can override permissions for any individual on a specific page:
+
+1. Open the page and click **…** (more options) → **Share**.
+2. Under **People with access**, find the person or invite them by email.
+3. Click the dropdown next to their name and select **Can view**, **Can comment**, or **Can edit**.
+
+Page-level overrides work in both directions:
+
+- **Grant more access**: Give a Guest edit permissions on a single page without promoting them to Member across the whole workspace.
+- **Restrict access**: Prevent a Member from editing a sensitive page by setting them to **Can view** for that specific page.
+
+## Permission Inheritance
+
+Sub-pages inherit their parent page's permission settings by default. For example, if you share a parent page with a guest and set them to **Can comment**, every sub-page under it automatically grants that guest the same access.
+
+To override inheritance on a sub-page:
+
+1. Open the sub-page and go to **…** → **Share**.
+2. Disable **Inherit parent permissions**.
+3. Set the permissions for this page independently.
+
+<Note>
+  When you move a page to a new parent, the page adopts the new parent's inherited permissions. Review the page's share settings after any move to ensure access is still correct.
+</Note>
+
+## Restricting a Page
+
+By default, all Members of a workspace can discover and view pages that are not explicitly restricted. To hide a page from Members not specifically invited:
+
+1. Open the page and click **…** → **Restrict**.
+2. Select **Only people with access**.
+3. The page disappears from the workspace sidebar and search results for anyone not listed under **People with access**.
+
+Admins and Owners can always see restricted pages, regardless of the page-level settings.
+
+<Tip>
+  Use restrictions for pages containing HR data, financial projections, or board materials. This way, the content lives in Jetie alongside your other work without being visible to the whole team.
+</Tip>

@@ -1,47 +1,105 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Get Started with Jetie in 5 Minutes"
+sidebarTitle: "Quickstart"
+description: "Sign up, create a workspace, write your first page, invite a teammate, and run your first AI task — all in five minutes or less."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+Jetie is designed to feel familiar from the first minute and powerful within the first five. This guide walks you through every step from creating your account to seeing the AI break down a real goal — no configuration required, no credit card needed.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+<Tip>
+  If you'd rather start with a pre-built structure, choose one of Jetie's built-in templates when creating your workspace. Templates for project tracking, team wikis, and personal knowledge bases give you a head start without any setup.
+</Tip>
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Sign Up">
+    Open your browser and navigate to [app.jetie.app/signup](https://app.jetie.app/signup). Enter your name, email address, and a password, then click **Create account**.
 
-    ```bash
-    npm install your-package
-    ```
+    Jetie automatically places you on the **free plan** — no credit card is required. You'll receive a confirmation email; click the link inside to verify your address and activate your account.
+
+    <Note>
+      If your team is already on Jetie, ask a workspace admin to send you an invite link instead. Joining via invite skips workspace creation and drops you directly into your team's shared space.
+    </Note>
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
 
-    ```bash
-    your-cli init
-    ```
+  <Step title="Create Your First Workspace">
+    After verifying your email, Jetie prompts you to set up a workspace. Give your workspace a name — this is typically your name, your team's name, or your company name.
+
+    Next, pick a starting template:
+
+    | Template | Best for |
+    |---|---|
+    | **Blank** | Starting from scratch with full flexibility |
+    | **Project Tracker** | Managing tasks, timelines, and deliverables |
+    | **Knowledge Base** | Building a searchable internal wiki |
+
+    Click **Create workspace** to continue. Jetie initializes your workspace and opens it immediately.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
-    ```bash
-    your-cli start
-    ```
+  <Step title="Create a Page">
+    Every piece of content in Jetie lives inside a **page**. To create your first one, click **New Page** in the left sidebar — or, from anywhere in the workspace, press `N` on your keyboard.
+
+    A new untitled page opens in the editor. Click the title area at the top and type a name for your page. Your page is saved automatically as you type; there's no save button to worry about.
+  </Step>
+
+  <Step title="Write with Blocks">
+    Jetie uses a **block-based editor**, meaning every element on a page — a paragraph, a heading, a table — is an individual block you can move, style, and transform independently.
+
+    To add a block, click on a blank line and type `/` to open the **block menu**. Here are five block types to try first:
+
+    | Block | Command | What it does |
+    |---|---|---|
+    | **Text** | `/text` | A standard paragraph block for prose |
+    | **Heading** | `/h1`, `/h2`, `/h3` | Section headers at three levels of hierarchy |
+    | **To-do** | `/todo` | A checkbox item for tracking tasks inline |
+    | **Image** | `/image` | Upload or embed an image from a URL |
+    | **Table** | `/table` | A structured grid for data and comparisons |
+
+    To move any block, hover over it to reveal the **drag handle** (⠿) on the left, then drag it to a new position on the page.
+  </Step>
+
+  <Step title="Invite a Teammate">
+    Jetie is built for collaboration. To bring a colleague into your workspace:
+
+    1. Click **Settings** in the bottom-left corner of the sidebar.
+    2. Navigate to the **Members** tab.
+    3. Click **Invite member** and enter your teammate's email address.
+    4. Choose a role — **Editor** (can create and edit pages) or **Viewer** (read-only access) — and click **Send invite**.
+
+    Your teammate receives an email with a link to join. Once they accept, they appear in the Members list and can access the workspace immediately.
+  </Step>
+
+  <Step title="Try the AI Assistant">
+    Jetie's AI assistant understands the context of your workspace and can answer questions, generate content, and decompose goals into structured task plans.
+
+    To open the AI panel, press `Cmd + K` on macOS or `Ctrl + K` on Windows and Linux — or click the **Ask AI** button in the top-right corner of any page.
+
+    In the prompt field, type a high-level goal. For example:
+
+    > *"Plan a product launch for a new mobile app feature."*
+
+    The AI responds with a decomposed task plan — a structured list of steps, sub-tasks, and considerations drawn from your goal and the context of your workspace. You can accept individual tasks, regenerate suggestions, or refine the goal and try again.
+
+    <Note>
+      On the free plan, you have **50 AI interactions per month**. Each message you send to the AI, including task decomposition requests, counts as one interaction. Upgrade to a paid plan for unlimited AI usage.
+    </Note>
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## What's Next?
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+Now that your workspace is live and you've seen Jetie in action, explore what's possible:
+
+<CardGroup cols={2}>
+  <Card title="Block Editor" icon="pen-to-square" href="/documents/editor">
+    Learn every block type, keyboard shortcut, and formatting option available in the editor.
+  </Card>
+  <Card title="AI Chat" icon="message-bot" href="/ai/chat">
+    Discover how to ask the AI questions about your documents and get context-aware answers.
+  </Card>
+  <Card title="Task Decomposition" icon="list-check" href="/ai/task-decomposition">
+    Go deeper on how the AI breaks down goals and how to work with the generated task plans.
+  </Card>
+  <Card title="Workspace Setup" icon="gear" href="/workspace-setup">
+    Customize your workspace settings, sidebar, and notification preferences.
+  </Card>
+</CardGroup>

@@ -1,0 +1,144 @@
+---
+title: "Pages and Blocks: Jetie's Building Blocks"
+sidebarTitle: "Pages & Blocks"
+description: "Pages are your documents in Jetie, and blocks are the atomic units inside them. Learn how to create, arrange, and link content effectively."
+---
+
+Every piece of content you create in Jetie lives on a page, and every page is assembled from blocks. A block is any discrete unit of content — a paragraph, a heading, an image, a to-do checkbox — that you can add, move, and style independently. This block-based model gives you the flexibility to structure documents exactly the way you think, without being locked into a rigid template.
+
+## Pages
+
+Pages are the documents inside your workspace. You can nest them inside sections or inside other pages, creating a hierarchy as deep as your project requires. Each page has its own URL, can be shared individually, and supports a cover image, an icon, and custom metadata properties.
+
+### Creating a Page
+
+You have three ways to create a new page:
+
+<Steps>
+  <Step title="Keyboard shortcut">
+    Press `N` from anywhere in the workspace to open a new untitled page in the current section.
+  </Step>
+  <Step title="Sidebar button">
+    Click the **+** icon next to any section name in the left sidebar. The new page appears immediately beneath that section.
+  </Step>
+  <Step title="Command palette">
+    Press `Cmd + K` (macOS) or `Ctrl + K` (Windows/Linux) to open the command palette, then type **New page** and press `Enter`.
+  </Step>
+</Steps>
+
+### Page Cover and Icon
+
+Give your pages a visual identity to make them easier to navigate at a glance.
+
+- **Cover image** — Click **Add cover** at the top of any page. Upload your own image, pick one from Jetie's built-in gallery, or paste an image URL.
+- **Page icon** — Click **Add icon** to choose an emoji or upload a custom icon that appears in the sidebar and at the top of the page.
+
+### Nested Pages and Page Linking
+
+Pages can live inside other pages as sub-pages, letting you build tree-structured documentation without cluttering the main sidebar.
+
+- To create a sub-page, type `/` inside a page, select **Sub-page**, and give it a name.
+- To link to any page from within another page, type `@` followed by the page name. Jetie shows a live dropdown as you type — select the page to insert a clickable reference.
+
+<Tip>
+  Use `@page-name` links liberally to connect related pages. Jetie's AI assistant follows these links to build context when answering questions about your workspace.
+</Tip>
+
+### Page Properties
+
+Every page supports custom metadata fields called **properties**. Add properties such as status, owner, date, URL, or any custom text or number field directly below the page title. Properties sync with any database view that includes the page, making them especially powerful for task and project tracking.
+
+### Databases
+
+A database is a special page type that stores structured, filterable records. Each record in a database is itself a full page. Databases support multiple views so different team members can see the same data in the format that suits them best.
+
+| View | Best for |
+|---|---|
+| **Table** | Spreadsheet-style data entry and sorting |
+| **Kanban** | Workflow stages and status tracking |
+| **Calendar** | Date-driven scheduling and deadlines |
+| **Gallery** | Visual content, image-heavy records |
+
+---
+
+## Blocks
+
+### Adding a Block
+
+Type `/` on any blank line inside a page to open the block menu. Start typing the name of the block you want — Jetie filters the list in real time — then press `Enter` to insert it.
+
+### Key Block Types
+
+<CardGroup cols={3}>
+  <Card title="Text & Headings" icon="text">
+    Plain paragraphs and H1 / H2 / H3 headings for structuring your writing.
+  </Card>
+  <Card title="To-Do" icon="circle-check">
+    Checkbox blocks for inline task tracking. Each to-do can be assigned and given a due date.
+  </Card>
+  <Card title="Image" icon="image">
+    Upload images directly or embed from a URL. Resize inline by dragging the edges.
+  </Card>
+  <Card title="Code" icon="code">
+    Syntax-highlighted code blocks supporting 50+ languages, with a one-click copy button.
+  </Card>
+  <Card title="Table" icon="table">
+    Lightweight inline tables for quick comparisons — separate from full database tables.
+  </Card>
+  <Card title="Toggle" icon="chevron-right">
+    Collapsible sections to hide detail until the reader needs it. Great for FAQs and long references.
+  </Card>
+</CardGroup>
+
+<Accordion title="Full list of available block types">
+  - **Text** — paragraph, heading 1, heading 2, heading 3
+  - **Lists** — bulleted list, numbered list, toggle list
+  - **Tasks** — to-do checkbox
+  - **Media** — image, video, audio, file attachment
+  - **Embeds** — Figma, Loom, Google Maps, GitHub Gist, and any URL that supports oEmbed
+  - **Data** — inline table, database link
+  - **Structure** — divider, columns (2 or 3)
+  - **Code** — code block with language selector
+  - **Callout** — highlighted box with a custom icon, useful for warnings and tips
+  - **Quote** — indented block-quote formatting
+  - **Math** — LaTeX equation block (inline and display)
+  - **Sub-page** — embed a child page inline
+</Accordion>
+
+### Moving Blocks
+
+Every block has a drag handle (⠿) on its left edge that appears when you hover. You can rearrange content in two ways:
+
+1. **Drag and drop** — Click and hold the drag handle, then drag the block to its new position. A blue insertion line shows where it will land.
+2. **Cut and paste** — Select one or more blocks with `Shift + Click`, cut with `Cmd/Ctrl + X`, position your cursor, and paste with `Cmd/Ctrl + V`.
+
+### Keyboard Shortcuts
+
+```
+# Creating blocks
+/           Open block menu on any empty line
+Enter       Create a new text block below
+Shift+Enter Insert a line break inside the current block
+Tab         Indent a block (creates a nested list item)
+Shift+Tab   Outdent a block
+
+# Selecting and moving blocks
+Cmd/Ctrl+A  Select all blocks on the page
+Shift+↑/↓   Extend selection to adjacent blocks
+Cmd/Ctrl+X  Cut selected blocks
+Cmd/Ctrl+C  Copy selected blocks
+Cmd/Ctrl+V  Paste blocks at cursor
+Cmd/Ctrl+D  Duplicate selected block(s)
+Backspace   Delete selected block(s)
+
+# Formatting (text blocks)
+Cmd/Ctrl+B  Bold
+Cmd/Ctrl+I  Italic
+Cmd/Ctrl+U  Underline
+Cmd/Ctrl+E  Inline code
+Cmd/Ctrl+K  Insert or edit a hyperlink
+```
+
+<Note>
+  You can turn any block into a different block type without retyping its content. Click the drag handle (⠿) and select **Turn into** from the context menu to convert — for example, change a text block into a callout or a heading.
+</Note>

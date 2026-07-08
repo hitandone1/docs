@@ -1,0 +1,107 @@
+---
+title: "Using the Jetie Block Editor"
+sidebarTitle: "Editor"
+description: "Master Jetie's block-based editor to build rich pages with text, media, tables, and more — all auto-saved and instantly rearrangeable."
+---
+
+The Jetie editor treats every piece of content as an individual block — a paragraph, an image, a table, a code snippet — that you can move, style, and transform at any time. Open any page from the sidebar and start typing immediately; no formatting toolbar to hunt for and no Save button to remember.
+
+## Opening the Editor
+
+Click any page title in the left sidebar to open it in the editor. To create a new page, click **+ New Page** at the bottom of the sidebar or press `Cmd/Ctrl+N`. The editor opens with a single empty paragraph block and a cursor ready to go.
+
+## Slash Commands
+
+Type `/` anywhere on an empty line (or after a space) to open the block picker. Start typing the block name to filter the list, then press `Enter` or click to insert.
+
+| Block Type | Slash Command | Description |
+|---|---|---|
+| Paragraph | `/paragraph` or just start typing | Default text block for body copy |
+| Heading 1 | `/h1` or `/heading1` | Large top-level section heading |
+| Heading 2 | `/h2` or `/heading2` | Mid-level sub-section heading |
+| Heading 3 | `/h3` or `/heading3` | Small in-line sub-heading |
+| Bulleted List | `/bullet` | Unordered list with dot markers |
+| Numbered List | `/numbered` | Ordered list that auto-increments |
+| To-Do | `/todo` | Checkbox list for tasks and checklists |
+| Toggle | `/toggle` | Collapsible block that hides nested content |
+| Code Block | `/code` | Syntax-highlighted block with language selector |
+| Image | `/image` | Upload or embed an image from a URL |
+| Table | `/table` | Inline grid with sortable rows and columns |
+| Callout | `/callout` | Highlighted box with an emoji icon for notices |
+| Divider | `/divider` | Horizontal rule to visually separate sections |
+| Embed | `/embed` | Inline preview of external content by URL |
+| Database | `/database` | Linked or inline structured data view |
+
+<Tip>
+  Press `Escape` to dismiss the block picker without inserting a block, or press `Backspace` to delete the `/` character and return to plain typing.
+</Tip>
+
+## Inline Formatting
+
+Select any text within a block to reveal the inline formatting toolbar, or use keyboard shortcuts directly.
+
+| Format | Shortcut | Effect |
+|---|---|---|
+| Bold | `Cmd/Ctrl + B` | **Bold** text |
+| Italic | `Cmd/Ctrl + I` | *Italic* text |
+| Underline | `Cmd/Ctrl + U` | <u>Underlined</u> text |
+| Strikethrough | `Cmd/Ctrl + Shift + S` | ~~Struck-through~~ text |
+| Inline Code | `` Cmd/Ctrl + E `` | `Monospaced` code snippet |
+| Highlight Color | Toolbar → `A` | Background color behind text |
+| Link | `Cmd/Ctrl + K` | Hyperlink to a URL or internal page |
+
+## Selecting and Moving Blocks
+
+Hover over any block to reveal the drag handle (**⠿**) on the left edge. Use it to reorder blocks:
+
+- **Drag and drop** — click and hold the ⠿ handle, then drag the block to its new position.
+- **Keyboard reorder** — click a block to focus it, then press `Cmd/Ctrl + Shift + ↑` or `Cmd/Ctrl + Shift + ↓` to move it up or down one position.
+- **Select multiple blocks** — click the first block's ⠿ handle, then `Shift`-click another block's handle to select a range. Drag the entire selection as a group.
+
+## Turning One Block Type Into Another
+
+You can change any block into a different block type without re-typing its content:
+
+1. Hover over the block to reveal the **⠿** handle.
+2. Click the **`...`** (More options) icon that appears beside it.
+3. Choose **Turn into** from the menu.
+4. Select the target block type from the list.
+
+<Note>
+  Not all conversions are lossless. Turning a Table into a Paragraph, for example, flattens the cell content into plain text. Jetie will warn you before any destructive conversion.
+</Note>
+
+## Multi-Column Layouts
+
+Drag any block's ⠿ handle and hover it over the right edge of an adjacent block until a blue vertical divider appears, then release. Jetie creates a two-column layout automatically. Repeat to add more columns. To remove a column, drag its block away from the column zone or use **Turn into → Full width** from the block menu.
+
+<Tip>
+  Columns can themselves contain any block type, including nested toggles, images, and even other column groups.
+</Tip>
+
+## Embedding External Content
+
+Type `/embed` and paste any URL to insert a live inline preview. Jetie supports a wide range of sources:
+
+<CardGroup cols={2}>
+  <Card title="Video" icon="play">
+    YouTube and Vimeo videos play inline without leaving the page.
+  </Card>
+  <Card title="Design" icon="pen-nib">
+    Figma frames and prototypes render as interactive previews.
+  </Card>
+  <Card title="Maps" icon="map-pin">
+    Google Maps locations embed as a pannable, zoomable map.
+  </Card>
+  <Card title="Other Services" icon="puzzle-piece">
+    Miro boards, Loom videos, CodePen snippets, PDFs, and more.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Embedded content requires an active internet connection to render. When you export a page to PDF, all embeds become static thumbnail images.
+</Warning>
+
+## Auto-Save
+
+Every keystroke and block action is saved to Jetie's servers automatically. There is no Save button. A subtle **Saved** indicator appears in the top-right corner of the editor after each change is committed. If your connection drops, Jetie queues changes locally and syncs them the moment connectivity is restored.

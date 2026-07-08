@@ -1,0 +1,113 @@
+---
+title: "Share Pages and Workspaces with Your Team"
+sidebarTitle: "Sharing"
+description: "Learn how to invite workspace members, share individual pages, manage link permissions, and collaborate in real time inside Jetie."
+---
+
+Jetie gives you fine-grained control over who can see and edit your content. You can share an entire workspace by inviting members, or share a single page with a direct invite or a shareable link — each with its own permission level and optional expiry date.
+
+## Invite Members to a Workspace
+
+Inviting someone to your workspace gives them access according to their assigned role across all pages (subject to page-level restrictions).
+
+<Steps>
+  <Step title="Open Workspace Settings">
+    Click your workspace name in the top-left corner, then select **Settings**.
+  </Step>
+  <Step title="Go to the Members tab">
+    In the Settings sidebar, click **Members** to see everyone currently in your workspace.
+  </Step>
+  <Step title="Click Invite">
+    Select the **Invite** button in the top-right corner of the Members page.
+  </Step>
+  <Step title="Enter an email address">
+    Type the invitee's email address. You can enter multiple addresses separated by commas to send bulk invitations.
+  </Step>
+  <Step title="Choose a role">
+    Select a role from the dropdown — **Admin**, **Member**, or **Guest**. See [Roles and Permissions](/collaboration/permissions) for a full breakdown of what each role can do.
+  </Step>
+  <Step title="Send the invitation">
+    Click **Send Invite**. The recipient receives an email with a link to join your workspace. Their seat appears as pending until they accept.
+  </Step>
+</Steps>
+
+<Note>
+  Guest seats are limited by your plan. The Free plan supports up to **5 guests**; the Pro plan supports up to **20 guests**; the Business plan offers unlimited guests. Guests can only access pages you explicitly share with them and do not count as full workspace members.
+</Note>
+
+## Share a Single Page
+
+You can share any page independently of workspace membership — useful for collaborating with external stakeholders or restricting sensitive content to a subset of your team.
+
+### Invite People Directly
+
+1. Open the page you want to share.
+2. Click the **…** (more options) menu in the top-right corner of the page.
+3. Select **Share**.
+4. Under **Invite people**, enter the person's email address.
+5. Choose their permission level — **Can view**, **Can comment**, or **Can edit**.
+6. Click **Invite**. They'll receive an email notification with a direct link to the page.
+
+### Create a Shareable Link
+
+1. Open **Share** from the **…** menu on any page.
+2. Toggle on **Share link** to generate a unique URL.
+3. Set the link's permission level:
+
+| Permission | What the recipient can do |
+|---|---|
+| Can view | Read the page; cannot comment or edit |
+| Can comment | Read and leave comments; cannot edit blocks |
+| Can edit | Full editing access to the page |
+
+4. Optionally set a **Link expiry**:
+
+| Option | Behaviour |
+|---|---|
+| 1 day | Link deactivates after 24 hours |
+| 7 days | Link deactivates after one week |
+| 30 days | Link deactivates after one month |
+| No expiry | Link remains active until manually disabled |
+
+5. Copy the link and share it however you like.
+
+## Make a Page Publicly Accessible
+
+Toggling **Allow anyone with the link** makes the page accessible to anyone on the internet — no Jetie account required. This is ideal for public-facing documentation, changelogs, or knowledge bases.
+
+<Warning>
+  Public pages are indexed by search engines by default. If your page contains sensitive information, do not enable public access. Use a direct invite with an expiry link instead.
+</Warning>
+
+## Guest Access
+
+Guests can access specific pages without being full workspace members. This is perfect for contractors, clients, or external reviewers who only need visibility into particular content.
+
+- Guests are invited at the **page level** through the Share menu, not through workspace Settings → Members.
+- By default, guests have **Can view** access; you can upgrade them to **Can comment** or **Can edit** on a per-page basis.
+- Guests do not appear in your workspace sidebar and cannot discover other pages.
+
+<Note>
+  Guest access requires a **paid plan**. On the Free plan, you can add up to 5 guests. Upgrade to Pro or Business for higher guest limits.
+</Note>
+
+## Revoke Access
+
+To remove a person's access to a page:
+
+1. Open the **…** menu on the page and select **Share**.
+2. Find the person under **People with access**.
+3. Click the role dropdown next to their name and select **Remove access**.
+
+To disable a shareable link:
+
+1. Open **Share** from the **…** menu.
+2. Toggle off **Share link**. The link is immediately invalidated — anyone who tries to use the old URL will see an access-denied message.
+
+## Real-Time Collaboration
+
+When multiple people have a page open at the same time, Jetie synchronises edits live. You'll see each collaborator's cursor in the page, labelled with their display name and colour. Changes appear instantly without needing to refresh.
+
+<Tip>
+  If you notice conflicting edits, check the **Page history** (Page menu → **History**) to view a timestamped record of all changes and restore any previous version.
+</Tip>

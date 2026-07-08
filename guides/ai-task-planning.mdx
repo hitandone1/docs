@@ -1,0 +1,120 @@
+---
+title: "Plan Complex Projects with Jetie AI"
+sidebarTitle: "AI Task Planning"
+description: "Use Jetie's AI assistant to turn a rough idea into a fully structured project plan — with milestones, subtasks, owners, and time estimates."
+---
+
+Planning a complex project from scratch is one of the hardest parts of any initiative. Jetie's AI assistant shortens that process significantly by taking your high-level goal and returning a structured plan you can immediately act on. This guide covers the full planning flow — from your first prompt to an iterable, living project plan inside your workspace.
+
+<Tip>
+  AI task planning works best when you treat it as a conversation rather than a one-shot prompt. Start broad, then use follow-up prompts to drill into the areas that need more detail. You can refine the plan as many times as you need before inserting it into the workspace.
+</Tip>
+
+<Steps>
+  <Step title="Describe your goal in AI Chat">
+    Open **AI Chat** by pressing `Cmd+Shift+A` (Mac) or `Ctrl+Shift+A` (Windows/Linux), or by clicking the **AI Chat** button in the top navigation. Type a clear, high-level goal statement. Be as specific as you can about the scope and timeline — for example:
+
+    ```
+    Plan a product launch for our new mobile app in 8 weeks.
+    The team includes 2 engineers, 1 designer, and 1 marketer.
+    We need to coordinate beta testing, app store submission, and a press release.
+    ```
+
+    The more context you provide upfront, the more accurate and immediately useful the AI's first response will be.
+  </Step>
+
+  <Step title="Review the AI's decomposition">
+    Jetie AI returns a structured plan that includes:
+
+    - **Milestones** broken down by week or phase
+    - **Subtasks** under each milestone, each with a suggested owner role and time estimate
+    - **Dependencies** flagged where one task must complete before another begins
+    - **Risk notes** highlighting areas that commonly cause delays
+
+    Read through the full output before accepting it. The AI's plan is a strong starting point, but you know your team and constraints better than it does.
+  </Step>
+
+  <Step title="Refine with follow-up prompts">
+    Use the chat thread to iterate on the plan. You can ask the AI to adjust any part of its output before you insert anything into the workspace. Effective refinement prompts include:
+
+    ```
+    Make the design phase more granular — break it into wireframes,
+    user testing, and high-fidelity mockups.
+    ```
+
+    ```
+    Add a risk register section that covers timeline slippage,
+    scope creep, and third-party API dependencies.
+    ```
+
+    ```
+    Assign all dev tasks to @alex and all design tasks to @priya.
+    ```
+
+    Keep refining until the plan reflects the real scope and team structure. There's no limit on follow-up messages.
+  </Step>
+
+  <Step title="Insert the plan into your workspace">
+    Once you're satisfied with the plan, click the **Add to workspace** button at the bottom of the AI's response. Jetie will:
+
+    1. Create a top-level **Project** page with the goal statement as the header
+    2. Generate a **Task database** in kanban view, pre-populated with all tasks
+    3. Create individual **Milestone sub-pages** for each phase
+    4. Set suggested **due dates**, **assignees**, and **priority levels** on each task
+
+    You can place this content inside an existing page or have it created as a standalone project — choose your preference in the dialog that appears.
+  </Step>
+
+  <Step title="Iterate as the project evolves">
+    The AI isn't just useful at the start. Revisit AI Chat on your project page at any point to keep the plan current. Open the chat while viewing your project page so the AI has full context of what's already there, and try prompts like:
+
+    ```
+    What's blocking progress based on the current state of our task board?
+    ```
+
+    ```
+    We've completed the design phase. What should we prioritize next?
+    ```
+
+    ```
+    Summarize what's been completed so far and what's still pending.
+    ```
+
+    The AI reads your live task data, page content, and comments to give answers that reflect the actual state of the project — not just the original plan.
+  </Step>
+</Steps>
+
+## Prompt Examples That Work Well
+
+The following prompts consistently produce high-quality plans. Copy and adapt them for your own projects.
+
+<CardGroup cols={2}>
+  <Card title="Sprint Planning" icon="list-check">
+    ```
+    Break down building a mobile app MVP into weekly sprints.
+    Each sprint should have a goal, 3–5 tasks, and a definition of done.
+    ```
+  </Card>
+  <Card title="Risk Register" icon="triangle-exclamation">
+    ```
+    Create a risk register for this project. Include likelihood,
+    impact, and a mitigation strategy for each risk.
+    ```
+  </Card>
+  <Card title="Progress Summary" icon="chart-bar">
+    ```
+    Summarize what's been completed so far and what's still pending.
+    Flag any tasks that are overdue or blocked.
+    ```
+  </Card>
+  <Card title="Stakeholder Update" icon="envelope">
+    ```
+    Write a two-paragraph stakeholder update summarizing this week's
+    progress, decisions made, and the plan for next week.
+    ```
+  </Card>
+</CardGroup>
+
+<Note>
+  AI Chat on a project page automatically reads the page content and linked task database. If you open AI Chat from the global navigation instead, paste in the relevant context manually to get the most accurate responses.
+</Note>

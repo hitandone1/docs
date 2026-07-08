@@ -1,0 +1,74 @@
+---
+title: "Export Jetie Pages to PDF"
+sidebarTitle: "PDF Export"
+description: "Export any Jetie page or batch of pages to a clean, print-ready PDF with full control over size, orientation, fonts, and included content."
+---
+
+Exporting a Jetie page to PDF produces a clean, print-ready document that you can share with stakeholders, clients, or anyone who doesn't have a Jetie account. The export engine renders vector text and embedded images faithfully, so your carefully formatted page looks just as polished in PDF form as it does on screen.
+
+## How to Export a Page
+
+<Steps>
+  <Step title="Open the page">
+    Click the page you want to export in the sidebar. Make sure you're viewing the version you want — the export captures the page exactly as it appears.
+  </Step>
+  <Step title="Open the page menu">
+    Click the **`...`** icon in the top-right corner of the editor to open the page menu.
+  </Step>
+  <Step title="Navigate to Export">
+    Select **Export** from the menu, then choose **PDF** from the export format list.
+  </Step>
+  <Step title="Configure export options">
+    A settings panel opens. Adjust the options to suit your needs (see [Export Options](#export-options) below), then click **Download**.
+  </Step>
+  <Step title="Save the file">
+    Your browser downloads the PDF automatically. The file is named after the page title by default — rename it in your file system if needed.
+  </Step>
+</Steps>
+
+## Export Options
+
+Fine-tune every PDF export using the settings panel before you download.
+
+| Option | Choices | Notes |
+|---|---|---|
+| **Page size** | A4, Letter, Legal | Defaults to your workspace region setting |
+| **Orientation** | Portrait, Landscape | Landscape suits wide tables and timelines |
+| **Include sub-pages** | Yes / No | Yes produces a single multi-page PDF with all nested pages appended |
+| **Show page properties** | Yes / No | Toggles the display of properties such as Owner, Created date, and Status |
+| **Font size** | Small, Medium, Large | Medium matches the default editor size |
+| **Include comments** | Yes / No | Yes appends a comments summary at the end of the PDF |
+
+## Batch Export
+
+Export multiple pages in one action directly from the sidebar:
+
+1. In the sidebar, click the first page you want to export.
+2. Hold `Cmd/Ctrl` and click each additional page to add it to the selection.
+3. Right-click any selected page and choose **Export selected → PDF**.
+4. Configure the shared export options that apply to all selected pages.
+5. Click **Download** — Jetie packages all exported PDFs into a single `.zip` file.
+
+<Tip>
+  For large batches, Jetie generates the zip in the background and sends you an in-app notification with a download link when it's ready — you don't need to wait on the export screen.
+</Tip>
+
+## PDF Quality
+
+Jetie exports use vector rendering, which means text stays crisp at any zoom level and print resolution. Raster images embedded in the page are included at their original uploaded resolution.
+
+<Note>
+  PDFs exported on a **free plan** include a small Jetie watermark in the page footer. Upgrade to a paid plan to remove the watermark from all exports.
+</Note>
+
+## Limitations
+
+<Warning>
+  Interactive embeds — such as YouTube videos, Figma frames, Loom recordings, and Miro boards — cannot be rendered interactively in a static PDF. Jetie replaces each embed with a static thumbnail image and a printed URL so readers know where the content lives. If the embed has no thumbnail, a placeholder graphic appears instead.
+</Warning>
+
+The following content types also have known export constraints:
+
+- **Databases** export as a flat, read-only table. Filters, sorts, and grouped views are not preserved.
+- **Toggles** export in their current open/closed state. Closed toggles print as a single collapsed line.
+- **Very long pages** are paginated automatically using Jetie's layout engine; manual page-break control is not yet available.

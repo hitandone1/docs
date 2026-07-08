@@ -1,0 +1,104 @@
+---
+title: "Page Templates: Jump-Start Any Project"
+sidebarTitle: "Templates"
+description: "Use Jetie's built-in template gallery or save your own to spin up perfectly structured pages in seconds — no manual formatting required."
+---
+
+Templates let you create fully pre-structured pages with a single click, eliminating the setup time that slows down recurring work. Whether you need a meeting agenda, a product spec, or a sprint plan, Jetie's template gallery puts a polished starting point one click away — and you can build your own templates from any page you've already created.
+
+## Built-In Template Gallery
+
+Jetie ships with a curated set of templates covering the most common document types. Open the gallery by creating a new page and clicking **Use template**.
+
+<CardGroup cols={2}>
+  <Card title="Meeting Notes" icon="microphone">
+    Structured agenda, attendee list, discussion items, and action-item table — ready before the call even starts.
+  </Card>
+  <Card title="Project Brief" icon="briefcase">
+    Goals, scope, stakeholders, timeline, and success metrics laid out so every team member starts aligned.
+  </Card>
+  <Card title="Product Spec" icon="file-lines">
+    Problem statement, proposed solution, user stories, open questions, and launch checklist in one document.
+  </Card>
+  <Card title="OKR Tracker" icon="bullseye-arrow">
+    Quarterly objectives with nested key results, owners, and a progress column automatically formatted for review.
+  </Card>
+</CardGroup>
+
+Additional built-in templates include **Weekly Review**, **Knowledge Base Article**, **Bug Report**, and **Sprint Planning**. Browse the full gallery inside the app for previews of each.
+
+## Applying a Template
+
+<Steps>
+  <Step title="Create a new page">
+    Click **+ New Page** at the bottom of the sidebar, or press `Cmd/Ctrl + N`. A blank untitled page opens in the editor.
+  </Step>
+  <Step title="Open the template picker">
+    Click **Use template** in the centre of the empty page, or select it from the **`...`** page menu at the top right.
+  </Step>
+  <Step title="Browse the gallery">
+    Browse by category (Work, Personal, Engineering, HR, and more) or type a keyword in the search box to filter results.
+  </Step>
+  <Step title="Preview and select">
+    Click any template thumbnail to see a full preview. When you're ready, click **Use this template** to apply it to the current page.
+  </Step>
+</Steps>
+
+## Creating a Custom Template
+
+Turn any page you've built into a reusable template so your team can reproduce it instantly.
+
+<Steps>
+  <Step title="Open the page menu">
+    Navigate to the page you want to save as a template. Click the **`...`** icon in the top-right corner of the editor to open the page menu.
+  </Step>
+  <Step title="Save as template">
+    Select **Save as template** from the menu. A dialog appears asking you to confirm and name the template.
+  </Step>
+  <Step title="Name your template">
+    Enter a clear, descriptive name — for example, *"Q3 Sprint Planning"* or *"Client Onboarding Checklist"* — then click **Save**.
+  </Step>
+  <Step title="Find it under My Templates">
+    Your new template appears under the **My Templates** section in the gallery. Apply it to any new page exactly as you would a built-in template.
+  </Step>
+</Steps>
+
+<Tip>
+  Include a short description in the first paragraph of your page before saving it as a template. That text appears as the preview description in the gallery, helping teammates pick the right template at a glance.
+</Tip>
+
+## Sharing Templates with Your Workspace
+
+Workspace **Admins** and **Owners** can publish templates so every member can access them in a shared **Workspace Templates** section of the gallery.
+
+1. Open a custom template from **My Templates**.
+2. Click **`...`** → **Share with workspace**.
+3. Confirm the action in the dialog.
+
+To unpublish a shared template, follow the same steps and choose **Remove from workspace**.
+
+<Note>
+  Only Admins and Owners can share or remove workspace-level templates. Members can apply shared templates but cannot modify or delete them.
+</Note>
+
+## Template Variables
+
+Templates support placeholders that auto-fill the moment you apply a template to a new page. Use double curly braces in your template's content:
+
+| Variable | Fills With |
+|---|---|
+| `{{date}}` | Today's date in your workspace's date format |
+| `{{owner}}` | The name of the user who applied the template |
+| `{{workspace}}` | Your workspace name |
+| `{{page_title}}` | The title you give the new page |
+
+You can add any of these placeholders while editing your custom template. When a teammate applies the template, Jetie replaces every placeholder automatically — no manual editing required.
+
+## Duplicating a Template to Modify It
+
+If you want to adapt an existing template without changing the original, duplicate it first:
+
+1. In the template gallery, hover over the template card.
+2. Click the **`...`** overflow menu that appears on the card.
+3. Select **Duplicate**.
+4. The copy appears in **My Templates** with the name *"Copy of [original name]"* — rename and edit it freely.

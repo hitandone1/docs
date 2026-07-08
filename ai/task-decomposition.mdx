@@ -1,0 +1,118 @@
+---
+title: "AI Task Decomposition: Break Goals into Steps"
+sidebarTitle: "Task Decomposition"
+description: "Describe a goal in plain language and Jetie AI generates a full task breakdown with milestones, subtasks, owners, and durations."
+---
+
+AI Task Decomposition is Jetie's most powerful feature for turning ambition into action. You describe a goal in plain language — as loosely or as precisely as you like — and the AI generates a structured plan complete with milestones, subtasks, suggested owners, and estimated durations. Rather than staring at a blank project board, you start with a complete scaffold you can immediately review, refine, and adopt.
+
+## How to Decompose a Goal
+
+<Steps>
+  <Step title="Open AI Chat">
+    Click the chat icon in the bottom-left sidebar, or press `Cmd+K` (macOS) / `Ctrl+K` (Windows/Linux) from anywhere in your workspace.
+  </Step>
+  <Step title="Describe your goal">
+    Type your goal in plain language. For example:
+
+    ```text
+    "Launch a new marketing campaign for Q3"
+    ```
+
+    You don't need to use special syntax — write the way you'd explain the goal to a colleague.
+  </Step>
+  <Step title="Review the structured plan">
+    Jetie AI responds with a hierarchical breakdown: top-level milestones, subtasks under each milestone, suggested owners (based on your workspace members), and time estimates. Read through it and decide what to keep or change.
+  </Step>
+  <Step title="Edit inline before saving">
+    Each task in the AI response is editable directly in the chat panel. Click any task title, description, owner, or estimate to modify it before the plan touches your workspace.
+  </Step>
+  <Step title="Add the plan to your workspace">
+    Click **Add to workspace** to create a Task database populated with all the generated tasks, milestones, and metadata. Jetie creates the database in your current space by default.
+  </Step>
+  <Step title="Assign team members and adjust due dates">
+    Once the Task database is created, open it to assign specific team members and set precise due dates. The AI's suggestions serve as a starting point — you're always in control of the final values.
+  </Step>
+</Steps>
+
+## Decomposition Examples
+
+<Tabs>
+  <Tab title="Simple Goal">
+    **Goal entered:** "Write and publish a blog post about our new feature"
+
+    **AI-generated breakdown:**
+
+    - **Milestone 1 — Research & Outline** *(1 day)*
+      - Review feature release notes
+      - Identify target audience and key message
+      - Draft a 5-point outline
+
+    - **Milestone 2 — Writing** *(2 days)*
+      - Write first draft (~800 words)
+      - Add screenshots or diagrams
+      - Internal review pass
+
+    - **Milestone 3 — Publishing** *(0.5 days)*
+      - Copy-edit and proofread
+      - Upload to CMS and set metadata
+      - Schedule or publish post
+
+    Simple goals produce a flat, focused plan — ideal for individual contributors working on a single deliverable.
+  </Tab>
+  <Tab title="Complex Project">
+    **Goal entered:** "Launch a new marketing campaign for Q3 targeting enterprise customers in EMEA"
+
+    **AI-generated breakdown:**
+
+    - **Milestone 1 — Strategy & Positioning** *(1 week)*
+      - Define ICP and messaging pillars
+      - Competitive landscape review
+      - Sign off on campaign brief
+
+    - **Milestone 2 — Asset Production** *(2 weeks)*
+      - Write long-form landing page copy
+      - Produce 3-part email nurture sequence
+      - Design social ad creatives (6 variants)
+      - Record 60-second explainer video
+
+    - **Milestone 3 — Channel Setup** *(1 week)*
+      - Configure LinkedIn and Google Ads campaigns
+      - Set up UTM tracking and attribution
+      - QA all landing page flows
+
+    - **Milestone 4 — Launch & Optimise** *(Ongoing)*
+      - Go live on campaign start date
+      - Weekly performance review
+      - A/B test subject lines and ad copy
+
+    Complex projects receive multi-level breakdowns with cross-functional ownership suggestions and realistic sequencing based on dependencies.
+  </Tab>
+</Tabs>
+
+## Refining the Plan
+
+You don't have to accept the first decomposition. Use follow-up messages to iterate:
+
+- **"Make this more granular"** — AI splits each task into smaller subtasks
+- **"Simplify this"** — AI collapses the plan to the essential milestones only
+- **"Add a QA phase"** — AI inserts a new milestone with relevant subtasks
+- **"Assume a team of two"** — AI rebalances the workload accordingly
+
+The AI retains the full context of the decomposition throughout your session, so each refinement builds on the last.
+
+## Context-Aware Planning
+
+If your workspace already contains pages or tasks related to your goal, Jetie automatically incorporates them. For example, if you have an existing **Q3 Roadmap** page, the AI references it when generating the breakdown — avoiding duplicate tasks and aligning milestones with your existing timeline.
+
+## Autopilot Mode
+
+Autopilot takes decomposition one step further. In addition to creating the Task database, the AI drafts the first page for each milestone and links everything together into a connected project structure — all before you've written a single word.
+
+<Warning>
+  Autopilot mode requires your explicit confirmation before making any changes to your workspace. A preview of all pages and tasks to be created is shown first. Nothing is saved until you click **Approve and create**. You can cancel or modify the plan at any point during the review.
+</Warning>
+
+## Exporting the Plan
+
+Once your task database is created, you can share the plan with stakeholders who don't have Jetie access. Open the Task database, click the **⋯** menu in the top-right corner, and select **Export → PDF**. The exported PDF includes all milestones, subtasks, owners, and due dates in a clean, printable layout.

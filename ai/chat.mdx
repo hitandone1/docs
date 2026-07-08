@@ -1,0 +1,88 @@
+---
+title: "AI Chat: Ask Questions About Your Workspace"
+sidebarTitle: "AI Chat"
+description: "Ask natural-language questions grounded in your workspace pages, tasks, and documents — no copy-pasting context required."
+---
+
+Jetie AI Chat lets you have a live conversation with an AI that already knows your workspace. Instead of copying content into a separate tool, you ask questions directly — about your pages, your tasks, your documents — and get answers grounded in what you've actually written. Whether you need a quick summary or a drafted email, AI Chat meets you where your work lives.
+
+## Opening AI Chat
+
+You can start a conversation from anywhere in Jetie using any of the following methods:
+
+- **Chat icon** — click the speech-bubble icon in the bottom-left corner of the sidebar
+- **Keyboard shortcut** — press `Cmd+K` on macOS or `Ctrl+K` on Windows and Linux
+- **Inline trigger** — click **Ask AI** inside any open page to start a conversation scoped to that page
+
+## Scoping Your Context
+
+Jetie AI Chat reads your workspace content to answer questions accurately. By default, the AI reads the page you currently have open. You can expand or narrow that scope using **@-mentions** in your message.
+
+| Scope | Syntax | What it includes |
+|---|---|---|
+| Current page | *(default)* | The page you have open |
+| Entire workspace | `@workspace` | All indexed pages and tasks |
+| Specific page | `@page-name` | Only the named page |
+
+<Tip>
+  Use `@workspace` when your question spans multiple projects or documents — for example, "What are all the open action items across `@workspace`?" Jetie searches your entire content index and surfaces the most relevant results.
+</Tip>
+
+## Example Prompts
+
+The following prompts give you a sense of what AI Chat can do out of the box:
+
+```text
+"Summarize this spec for a non-technical audience"
+"What tasks are assigned to me this week?"
+"What decisions were made in last week's meeting notes?"
+"Draft a follow-up email based on this meeting page"
+```
+
+You can follow up on any response — ask for more detail, a different format, or a shorter version, and the AI will adjust without losing the thread of the conversation.
+
+## Inserting AI Output into a Page
+
+When AI Chat returns a response you want to keep, click **Insert into page** at the bottom of that response. Jetie places the content as a new block at your cursor position in the currently open page. You can then edit it like any other block.
+
+## Multi-Turn Conversations
+
+AI Chat remembers the last **20 messages** in a session, so you can refer back to earlier context without repeating yourself. For example, you can ask a follow-up like "Make that shorter" or "Add a section on timelines" and the AI understands what "that" refers to.
+
+To start a completely fresh conversation — with no prior context — click the **broom icon** in the top-right corner of the chat panel.
+
+## Chat History
+
+Every conversation is automatically saved. To revisit a past session:
+
+<Steps>
+  <Step title="Open the sidebar">
+    Click the **AI** section in the left sidebar to expand it.
+  </Step>
+  <Step title="Navigate to Recent Chats">
+    Click **Recent chats** to see a list of your saved conversations, ordered by most recent.
+  </Step>
+  <Step title="Reopen a conversation">
+    Click any conversation to reopen it. You can continue the thread or read back through the history.
+  </Step>
+</Steps>
+
+<Note>
+  Chat history is retained for **30 days**. Conversations older than 30 days are automatically deleted. If you want to preserve important AI-generated content permanently, use **Insert into page** to save it to a workspace page before it expires.
+</Note>
+
+## Usage Limits
+
+The number of AI Chat messages you can send per month depends on your plan.
+
+<CardGroup cols={3}>
+  <Card title="Free" icon="circle">
+    **50 messages** per month. Ideal for light, occasional use across personal pages.
+  </Card>
+  <Card title="Pro" icon="circle-half-stroke">
+    **500 messages** per month. Suitable for individuals and small teams with regular AI use.
+  </Card>
+  <Card title="Business" icon="circle-dot">
+    **Unlimited messages.** No caps — designed for teams that rely on AI Chat daily.
+  </Card>
+</CardGroup>

@@ -1,0 +1,110 @@
+---
+title: "Import PDFs as Editable Jetie Pages"
+sidebarTitle: "PDF Import"
+description: "Convert any PDF into a fully editable Jetie page — headings, paragraphs, tables, and images are all preserved and ready to update instantly."
+---
+
+Jetie can take any PDF — whether it's a clean digital export or a scanned paper document — and convert it into a fully editable page. Headings become Heading blocks, paragraphs become Text blocks, tables become Table blocks, and images are extracted and placed as Image blocks. The result is a live Jetie page you can edit, comment on, share, and export like any other document.
+
+## How to Import a PDF
+
+<Steps>
+  <Step title="Create a new page">
+    In the sidebar, click **+ New Page** or press `Cmd/Ctrl + N` to open a new blank page.
+  </Step>
+  <Step title="Open the Import dialog">
+    Click **Import** from the options shown on the empty page, or select **`...`** → **Import** from the page menu at the top right.
+  </Step>
+  <Step title="Select PDF as the source">
+    In the import format list, choose **PDF**.
+  </Step>
+  <Step title="Upload your file">
+    Either drag and drop your PDF onto the upload zone, or click **Browse files** to select it from your file system.
+  </Step>
+  <Step title="Start the import">
+    Click **Import**. Jetie processes the file and converts it to blocks. Depending on the file size and complexity, this may take a few seconds to a minute.
+  </Step>
+  <Step title="Review and edit">
+    Once processing is complete, Jetie opens the converted page in the editor. Review the content, fix any conversion artefacts, and start editing immediately.
+  </Step>
+</Steps>
+
+## Digital PDF vs. Scanned PDF
+
+The import experience differs depending on the type of PDF you're uploading.
+
+<Tabs>
+  <Tab title="Digital PDF">
+    A digital PDF is one that was exported from a program — a Word document, a Google Doc, a design tool, or any application that generated the PDF directly.
+
+    **What converts well:**
+    - Paragraphs and body text → **Text blocks**
+    - Headings identified by font size or style → **Heading 1, 2, or 3 blocks**
+    - Tables with clearly defined rows and columns → **Table blocks**
+    - Embedded raster and vector images → **Image blocks**
+    - Bulleted and numbered lists → **Bulleted List** and **Numbered List blocks**
+
+    **What may not convert perfectly:**
+    - Complex multi-column magazine-style layouts may collapse into a single column
+    - Decorative fonts and custom glyphs may not map to standard characters
+    - Overlapping text boxes and watermarks can introduce stray characters
+
+    Digital PDF imports are available on **all plans**, including free.
+  </Tab>
+  <Tab title="Scanned PDF">
+    A scanned PDF is an image of a physical document — a photograph or flatbed scan captured as a PDF file. The text is not machine-readable without Optical Character Recognition (OCR).
+
+    **How Jetie handles scanned PDFs:**
+    Jetie automatically detects that the PDF is image-based and applies its built-in OCR engine to extract text before converting it to blocks.
+
+    <Note>
+      OCR is available on **paid plans only**. On the free plan, scanned PDFs are imported as a static image view — the pages are displayed as non-editable Image blocks. Upgrade to a paid plan to unlock full OCR conversion.
+    </Note>
+
+    **OCR accuracy tips:**
+    - Clean, high-contrast scans (300 dpi or above) produce the best results
+    - Handwritten text is not currently supported by the OCR engine
+    - Documents with heavy graphic backgrounds or watermarks may have reduced accuracy
+
+    After OCR, the same block conversion rules apply as for digital PDFs. Jetie flags low-confidence text regions with a subtle underline so you can review and correct them quickly.
+  </Tab>
+</Tabs>
+
+## What Gets Converted
+
+| PDF Content | Converted To |
+|---|---|
+| Headings (by font size) | Heading 1, 2, or 3 blocks |
+| Body paragraphs | Text blocks |
+| Bullet and numbered lists | Bulleted List / Numbered List blocks |
+| Tables | Table blocks |
+| Embedded images | Image blocks |
+| Horizontal rules | Divider blocks |
+
+## After Import
+
+Once the import finishes, the page behaves exactly like any other Jetie page — you can edit every block, add new content, apply a template, share it with teammates, or export it back to PDF.
+
+The original PDF file is automatically attached to the page as a downloadable file at the bottom. Teammates with access to the page can download it at any time from the attachments section.
+
+## Replacing an Imported PDF
+
+If the source document is updated and you need to re-import a newer version:
+
+1. Open the page menu (**`...`**) in the top-right corner.
+2. Select **Replace source PDF**.
+3. Upload the new file.
+4. Choose whether to **overwrite** the existing blocks or **append** the new content below the existing page.
+
+<Warning>
+  Choosing **Overwrite** replaces all current page content with the re-imported version. Any manual edits you made after the original import will be lost. Consider duplicating the page before replacing if you want to keep your edits.
+</Warning>
+
+## Supported File Sizes
+
+| Plan | Maximum File Size |
+|---|---|
+| Free | 50 MB |
+| Paid (Pro / Business / Enterprise) | 200 MB |
+
+If your PDF exceeds the limit for your plan, compress it using a PDF optimisation tool before uploading, or consider splitting it into smaller sections and importing each separately.

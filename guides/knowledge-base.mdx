@@ -1,0 +1,102 @@
+---
+title: "Build a Team Knowledge Base in Jetie"
+sidebarTitle: "Knowledge Base"
+description: "Set up a structured, searchable knowledge base for your team in Jetie — with AI-powered search, permission controls, and a database index."
+---
+
+A well-organized knowledge base means your team spends less time asking repetitive questions and more time doing focused work. Jetie lets you build one without any special configuration — using the same pages, databases, and AI tools you already use for project work. This guide walks you through setting up a KB from scratch and keeping it current over time.
+
+<Tip>
+  Once your knowledge base is live, team members can ask questions directly in AI Chat — for example, *"What's our parental leave policy?"* or *"How do I set up a local dev environment?"* — and get answers drawn from across your KB pages without needing to navigate manually.
+</Tip>
+
+<Steps>
+  <Step title="Create a top-level Knowledge Base page">
+    Click **+ New Page** in the sidebar and name it **Knowledge Base**. Add a short description at the top of the page explaining what the KB covers and who maintains it. Then right-click the page in the sidebar and select **Pin to sidebar** — this ensures every workspace member can find the KB immediately, regardless of how the page hierarchy is organized.
+  </Step>
+
+  <Step title="Create category sub-pages">
+    Inside the Knowledge Base page, add a sub-page for each major topic area your team needs. Common categories include:
+
+    - **Engineering** — architecture decisions, coding standards, runbooks
+    - **Product** — roadmap context, feature specs, design principles
+    - **HR & People** — policies, benefits, onboarding materials
+    - **Onboarding** — new hire checklist, tool access guide, team norms
+    - **Operations** — vendor contacts, process documentation, compliance
+
+    Start with the categories that get the most questions, then expand as content grows. Each category page acts as a landing page for its section, so add a brief description at the top of each one.
+  </Step>
+
+  <Step title="Use the Knowledge Base Article template for each article">
+    Inside a category page, click **+ Add sub-page**, then type `/template` and select **Knowledge Base Article**. This template includes:
+
+    - **Title** — descriptive and searchable
+    - **Owner** — the person responsible for keeping the article accurate
+    - **Last Updated** — a date field updated each time the article is edited
+    - **Summary** — a one-paragraph TL;DR at the top
+    - **Content** — the main body with headings, lists, and any embedded assets
+
+    Using a consistent template across all articles makes the KB predictable and easier to maintain.
+  </Step>
+
+  <Step title="Add a database index page">
+    Create a sub-page called **Article Index** directly inside the top-level Knowledge Base page. Add a **Database** block in **Table** view. Link it to your KB articles by using the **Relation** property to connect to pages across your workspace. Add filter and sort controls for **Category**, **Owner**, and **Tags** so teammates can find relevant articles without browsing the full hierarchy.
+
+    <Note>
+      The Article Index is especially useful for larger teams. When the KB grows to dozens of articles, the index becomes the fastest way to locate specific content.
+    </Note>
+  </Step>
+
+  <Step title="Enable AI search across the knowledge base">
+    Jetie's AI Chat automatically indexes all pages in your workspace. To make the KB queryable:
+
+    1. Go to **Settings → AI → Context sources**
+    2. Confirm that your Knowledge Base pages are included in the workspace context
+    3. Encourage teammates to ask questions using AI Chat before searching manually
+
+    AI Chat can synthesize answers from multiple articles at once — for example, combining information from three different HR policy pages into a single, coherent response.
+  </Step>
+
+  <Step title="Set permissions for the knowledge base">
+    Open the Knowledge Base page, click **Share**, and configure access:
+
+    - Set all **workspace members** to **Can view** by default
+    - Assign the **Can edit** role only to designated editors or team leads for each category
+    - Set **Admins** to **Full access** so they can restructure the KB as needed
+    - Leave the **Allow guests to view** toggle off unless you intend to share KB content externally
+
+    Apply the same permissions to all sub-pages by clicking **Apply to sub-pages** in the sharing dialog.
+  </Step>
+</Steps>
+
+## Keeping Your Knowledge Base Fresh
+
+A knowledge base only stays useful if the content is accurate. Use these practices to prevent articles from going stale.
+
+<CardGroup cols={3}>
+  <Card title="Assign an owner to every article" icon="user">
+    Every KB article should have exactly one owner — the person who owns that domain and is responsible for keeping the article accurate. Set this in the **Owner** property on the Knowledge Base Article template.
+  </Card>
+  <Card title="Flag stale content" icon="clock">
+    Use the **Last Updated** property on each article and filter the Article Index to surface anything not edited in the past 90 days. Reach out to the article owner to schedule a review.
+  </Card>
+  <Card title="Set quarterly review tasks" icon="calendar">
+    Create a recurring task in your workspace calendar each quarter: *"Review KB articles for staleness."* Assign it to the KB owner. Link the task to the Article Index so the reviewer has one-click access to every article.
+  </Card>
+</CardGroup>
+
+## Importing Existing Documentation
+
+If your team already has documentation in other formats, you don't need to recreate it from scratch.
+
+<Accordion title="Import PDFs or Word documents">
+  Go to **Settings → Import** and select **PDF** or **Word Document**. Upload the file, and Jetie converts it to a Jetie page with editable blocks. After import, open the page and apply the Knowledge Base Article template structure manually — add the Owner, Last Updated, and Summary fields at the top, then organize the body content with proper headings.
+</Accordion>
+
+<Accordion title="Import from Notion or Confluence">
+  Go to **Settings → Import**, select **Notion** or **Confluence**, and follow the OAuth flow. Jetie maps your existing page hierarchy, blocks, and databases automatically. After the import, move the relevant pages into the appropriate KB category sub-pages and apply the Knowledge Base Article template to each one.
+</Accordion>
+
+<Accordion title="Paste content from Google Docs or other sources">
+  Copy text from Google Docs, Microsoft Word, or any other source and paste it directly into a Jetie page. Jetie preserves headings, bold, italic, bullet lists, and tables. After pasting, clean up the formatting and add the KB article properties at the top of the page.
+</Accordion>

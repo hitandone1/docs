@@ -1,0 +1,105 @@
+---
+title: "PDF Import and Export Workflows in Jetie"
+sidebarTitle: "PDF Workflows"
+description: "Import external PDFs, collaborate on them in Jetie, and export polished reports — complete workflows for three common PDF scenarios."
+---
+
+Jetie treats PDFs as first-class content, not just attachments. You can import an existing PDF and immediately edit it as a live Jetie page, leave inline comments on specific sections, and export any page back to a polished PDF with your own branding. This guide covers three practical workflows that cover the most common PDF scenarios teams encounter.
+
+<Tabs>
+  <Tab title="Digitize Existing Docs">
+    Use this workflow when you have a PDF spec, policy document, or reference guide that your team needs to collaborate on and keep up to date.
+
+    <Steps>
+      <Step title="Import the PDF">
+        Go to **Settings → Import → PDF** and upload your file, or drag the PDF directly onto any page in the workspace. Jetie converts the PDF to an editable page — headings, paragraphs, tables, and lists are all mapped to the equivalent Jetie blocks. Images embedded in the PDF are preserved as image blocks.
+      </Step>
+
+      <Step title="Edit the page content">
+        Click into any block and edit it just like a normal Jetie page. Update outdated sections, reformat content with proper headings, add new blocks for context or clarification, and embed related links or media. Use the block menu (`/`) to insert callouts, tables, or database embeds if the content warrants it.
+      </Step>
+
+      <Step title="Share with your team">
+        Click **Share** in the top-right corner and set the appropriate access level for your team. Use **Can edit** for contributors and **Can view** for stakeholders who only need to read the document. Teammates can leave inline comments by highlighting any text and clicking the comment icon that appears.
+      </Step>
+
+      <Step title="Export the updated version as PDF">
+        When revisions are complete, press `Cmd+Shift+E` (Mac) or `Ctrl+Shift+E` (Windows/Linux) and select **Export to PDF**. Choose your branding options — logo, cover page, and footer — then click **Export**. The downloaded PDF reflects all edits made in Jetie.
+      </Step>
+    </Steps>
+
+    <Tip>
+      Use **Heading 1**, **Heading 2**, and **Heading 3** blocks throughout the document. When you export to PDF, Jetie generates a proper table of contents from these headings automatically.
+    </Tip>
+  </Tab>
+
+  <Tab title="Stakeholder Reports">
+    Use this workflow when you need to produce a polished status update or executive report from live project data.
+
+    <Steps>
+      <Step title="Build the report page in Jetie">
+        Create a new page and give it a descriptive name such as *"Q3 Product Launch — Status Report."* Use the **Project Status Report** template (`/template → Project Status Report`) for a pre-structured layout that includes an executive summary, key metrics, milestone progress, and next steps sections.
+      </Step>
+
+      <Step title="Populate with live task data">
+        Embed your project's kanban database directly in the report page by typing `/database embed` and linking to the existing task database. Add a **Summary stats** callout block above it showing total tasks, completed count, and overdue count. Use AI Chat to auto-generate the executive summary: *"Write a two-paragraph executive summary of this project's current status."*
+      </Step>
+
+      <Step title="Apply branding choices">
+        Open **Page settings** (`Cmd+Shift+,` / `Ctrl+Shift+,`) and set the page width to **Full**. Add your company logo as a header image by clicking the page cover area. Choose your preferred font and color accent under **Appearance**.
+      </Step>
+
+      <Step title="Export to PDF and distribute">
+        Press `Cmd+Shift+E` (`Ctrl+Shift+E`) and enable **Include sub-pages** if the report references milestone pages. Set the page orientation and size, then click **Export**. Share the downloaded PDF directly with stakeholders via email or upload it to a shared drive.
+      </Step>
+    </Steps>
+
+    <Tip>
+      Add a **Table of Contents** block at the top of long reports before exporting. It renders as a clickable TOC in PDF viewers that support internal navigation links.
+    </Tip>
+  </Tab>
+
+  <Tab title="Contract & SOP Review">
+    Use this workflow when you need to review a contract, SOP, or any document that requires structured feedback and approval before a final clean version is produced.
+
+    <Steps>
+      <Step title="Import the contract or SOP PDF">
+        Drag the PDF onto a new Jetie page or use **Settings → Import → PDF**. Jetie converts the document to editable blocks. Rename the page to include the document version — for example, *"NDA Template v1 — Review"* — so reviewers know which version they are commenting on.
+      </Step>
+
+      <Step title="Invite reviewers and leave inline comments">
+        Click **Share** and add reviewers with **Can comment** access. Reviewers highlight any clause or paragraph they want to flag, click the comment bubble that appears, and type their feedback. Comments are threaded — reviewers can reply to each other's points directly in the margin.
+
+        <Note>
+          Reviewers with **Can comment** access cannot edit the document body. This preserves the original text while the review is in progress.
+        </Note>
+      </Step>
+
+      <Step title="Resolve comments and make revisions">
+        As the document owner, work through each open comment. Click **Resolve** on comments that have been addressed, and edit the relevant block directly when a change is accepted. Use the **Page history** (`…` menu → **Page history**) to track exactly what changed between review rounds.
+      </Step>
+
+      <Step title="Export the clean final version">
+        Once all comments are resolved, press `Cmd+Shift+E` (`Ctrl+Shift+E`) and export to PDF. In the export dialog, enable **Hide resolved comments** to ensure the final PDF contains only the clean document text with no annotation artifacts. Save the exported PDF with a final version label — for example, *"NDA Template v2 — Final.pdf"*.
+      </Step>
+    </Steps>
+
+    <Warning>
+      Jetie's PDF import does its best to preserve complex layouts, but heavily formatted PDFs — such as those with multi-column layouts or scanned images — may require manual cleanup after import. Review the imported page carefully before sharing it with reviewers.
+    </Warning>
+  </Tab>
+</Tabs>
+
+## General PDF Tips
+
+<CardGroup cols={3}>
+  <Card title="Use Heading blocks for TOC" icon="list">
+    Structure your pages with **Heading 1**, **Heading 2**, and **Heading 3** blocks. Exported PDFs automatically build a table of contents from these headings.
+  </Card>
+  <Card title="Add a Table of Contents block" icon="book-open">
+    For long documents, insert a **Table of Contents** block at the top of the page before exporting. This creates a clickable navigation section in PDF viewers that support internal links.
+  </Card>
+  <Card title="Bundle sub-pages together" icon="file-zipper">
+    When exporting a full project, enable the **Include sub-pages** option in the export dialog. Jetie compiles the main page and all linked sub-pages into a single PDF, preserving the document hierarchy.
+  </Card>
+</CardGroup>

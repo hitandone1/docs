@@ -1,0 +1,159 @@
+---
+title: "Set Up and Customize Your Jetie Workspace"
+sidebarTitle: "Workspace Setup"
+description: "Configure your workspace name, icon, timezone, sidebar layout, and notifications to match how you and your team actually work."
+---
+
+A Jetie workspace is the top-level container for all your pages, documents, and AI interactions. It's the environment your team shares — or, for personal use, a private space that belongs only to you. Taking a few minutes to configure your workspace properly makes everything else faster: your sidebar stays organized, notifications go to the right places, and your teammates always land in a familiar structure.
+
+## Personal vs. Team Workspaces
+
+Jetie supports two modes of working, and the setup experience differs slightly between them.
+
+<Tabs>
+  <Tab title="Personal Workspace">
+    A personal workspace is tied to your individual account and is private by default. No one else can see or join it unless you explicitly invite them.
+
+    **Best for:**
+    - Personal notes, journals, and task lists
+    - Solo freelancers managing client projects
+    - Individuals who want AI assistance without team overlap
+
+    **Key characteristics:**
+    - You are the sole owner and admin
+    - Billing is managed directly from your account settings
+    - You can still invite guests to individual pages without giving them full workspace access
+    - AI interactions are scoped to your own content
+  </Tab>
+  <Tab title="Team Workspace">
+    A team workspace is a shared environment where multiple members can create, edit, and collaborate on pages. Members are assigned roles — **Owner**, **Admin**, **Editor**, or **Viewer** — that control what each person can do.
+
+    **Best for:**
+    - Product and engineering teams building shared documentation
+    - Organizations maintaining an internal knowledge base
+    - Any group that needs a single source of truth
+
+    **Key characteristics:**
+    - One or more Admins manage membership and billing
+    - Pages can be set to **Public to workspace** or **Private** (visible only to selected members)
+    - AI interactions are pooled across the workspace based on the plan
+    - Activity feeds and @mentions keep everyone in sync
+  </Tab>
+</Tabs>
+
+## Creating a Workspace
+
+To create a new workspace from scratch:
+
+1. Click your **workspace name** in the top-left corner of the sidebar to open the workspace switcher.
+2. Click **Create new workspace** at the bottom of the switcher panel.
+3. Enter a workspace name, upload an optional icon or logo, and choose **Personal** or **Team**.
+4. Click **Create** — your new workspace opens immediately.
+
+You can create multiple workspaces on any plan. Each workspace has its own pages, members, settings, and AI usage quota.
+
+## Joining an Existing Workspace
+
+If someone has invited you to an existing workspace, open the invite link from your email. You'll be prompted to sign in or create a Jetie account, after which you're added to the workspace automatically with the role the admin assigned you.
+
+<Note>
+  Workspace admins can also enable **domain-based auto-join**, which lets anyone with a matching company email address join the workspace without a personal invite. Admins configure this under **Settings → Members → Auto-join**.
+</Note>
+
+## Workspace Settings
+
+To access your workspace settings, click **Settings** in the bottom-left corner of the sidebar, then select the **General** tab.
+
+### Name and Icon
+
+- **Workspace name** — Click the name field and type a new name. Changes save automatically and are visible to all members immediately.
+- **Workspace icon** — Click the icon thumbnail to upload a square image (PNG or JPG, minimum 256×256 px). The icon appears in the sidebar and workspace switcher, making it easy to distinguish between multiple workspaces at a glance.
+
+### Timezone
+
+Set your workspace timezone under **Settings → General → Timezone**. Jetie uses this setting to display dates and times consistently across the workspace — including AI-generated task deadlines, notification digests, and activity timestamps. Choose the timezone that matches your team's primary location or your own location for personal workspaces.
+
+## Sidebar Customization
+
+The left sidebar is your main navigation panel. You can organize it to match how you actually work.
+
+**Pin pages to the top:**
+Hover over any page in the sidebar and click the **⋯** (more options) menu, then select **Pin to sidebar**. Pinned pages appear in a dedicated section at the top of the sidebar regardless of where they live in your page hierarchy.
+
+**Reorder pages:**
+Drag any page up or down in the sidebar using the drag handle (⠿) that appears on hover. Page order in the sidebar is independent of creation date.
+
+**Create sections:**
+Sections act as labeled dividers that group related pages together visually. To add a section:
+
+1. Right-click anywhere in the sidebar (or click **+** next to the sidebar header).
+2. Select **Add section**.
+3. Type a section label, such as *Engineering Docs* or *Active Projects*, and press `Enter`.
+
+Drag pages into sections to organize your sidebar into logical groups.
+
+## Notification Settings
+
+Jetie notifies you when something needs your attention. You control the frequency and channel for each type of notification under **Settings → Notifications**.
+
+| Notification type | What triggers it | Default |
+|---|---|---|
+| **@mention alerts** | Someone tags you with `@yourname` on a page | Instant (in-app + email) |
+| **Comment replies** | A reply is added to a comment thread you're part of | Instant (in-app) |
+| **Page updates** | A page you've starred or are watching is edited | Batched (daily digest) |
+| **Member activity** | Someone joins or leaves the workspace | In-app only |
+| **AI task updates** | An AI-generated task plan you own is modified | In-app only |
+
+To adjust any setting, toggle the corresponding switch or change the frequency from **Instant** to **Batched** (hourly or daily digest) or **Off**.
+
+<Tip>
+  If you're finding your inbox noisy, switch **Page updates** to a daily digest and turn off **Member activity** notifications. Most teams find @mention alerts and comment replies are the only ones they need on instantly.
+</Tip>
+
+## Switching Between Workspaces
+
+If you belong to multiple workspaces, you can switch between them without signing out. Click your **workspace name** in the top-left corner of the sidebar to open the workspace switcher. All workspaces you belong to are listed there — click any one to switch to it instantly.
+
+Your AI context, page history, and sidebar layout are each scoped to their own workspace, so switching between them is clean and non-disruptive.
+
+## Deleting or Leaving a Workspace
+
+<Warning>
+  Deleting a workspace is permanent and irreversible. All pages, documents, AI interaction history, and member data associated with the workspace are deleted immediately. Export anything you need before proceeding.
+</Warning>
+
+**To leave a workspace** (for members who are not the owner):
+
+1. Go to **Settings → Members**.
+2. Find your own name in the member list.
+3. Click **⋯ → Leave workspace**.
+
+You lose access immediately. Your contributions (pages, comments) remain in the workspace.
+
+**To delete a workspace** (owners only):
+
+1. Go to **Settings → General**.
+2. Scroll to the **Danger Zone** section at the bottom of the page.
+3. Click **Delete workspace** and type the workspace name to confirm.
+
+## Frequently Asked Questions
+
+<Accordion title="Can I rename my workspace?">
+  Yes. Go to **Settings → General**, click the workspace name field, type the new name, and your change saves automatically. The new name is visible to all members immediately. Renaming a workspace does not affect any pages, URLs, or member permissions.
+</Accordion>
+
+<Accordion title="How do I transfer ownership to another member?">
+  Only the current workspace Owner can transfer ownership. Go to **Settings → Members**, find the member you want to make Owner, click **⋯** next to their name, and select **Transfer ownership**. You'll be asked to confirm the transfer. Once confirmed, the other member becomes Owner and your role changes to Admin. You can only transfer ownership to a member who already has an Admin or Editor role in the workspace.
+</Accordion>
+
+<Accordion title="Can I have both a personal and a team workspace at the same time?">
+  Yes. Jetie lets you belong to as many workspaces as you like — personal and team workspaces coexist independently. Use the workspace switcher (top-left of the sidebar) to move between them. Each workspace has its own plan, billing, and AI usage quota.
+</Accordion>
+
+<Accordion title="What happens to my content if I downgrade my plan?">
+  All your pages and documents are preserved when you downgrade. If your usage exceeds the limits of your new plan (for example, you exceed the free plan's AI interaction limit), those features are paused until the next billing cycle or until you upgrade again. You are never locked out of your content.
+</Accordion>
+
+<Accordion title="Can I export my workspace before deleting it?">
+  Yes. Before deleting, go to **Settings → General → Export workspace** to download a full archive of all your pages as Markdown files and your PDFs as their original files. The export is delivered as a `.zip` file to the email address on your account, typically within a few minutes.
+</Accordion>

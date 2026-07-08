@@ -1,0 +1,114 @@
+---
+title: "Meet Jetie AI: Your Semi-Autonomous Assistant"
+sidebarTitle: "AI Assistant"
+description: "Jetie AI is a semi-autonomous assistant embedded in your workspace. It answers questions, decomposes goals into tasks, and takes actions with your approval."
+---
+
+Jetie AI is not a chatbot you open in a separate tab — it is embedded directly in your workspace, aware of the pages you are writing, the tasks on your plate, and the documents your team has shared. You can ask it a question and get an answer grounded in your actual content, or hand it a goal and watch it propose a step-by-step plan. Because it is semi-autonomous, it always shows you what it intends to do before changing anything, keeping you firmly in control.
+
+## Two Modes
+
+<Tabs>
+  <Tab title="Chat Mode">
+    **Chat mode** is a conversational Q&A interface anchored to your workspace content. Ask Jetie AI anything about your pages, tasks, or documents and it will answer using the information it finds — citing the source page so you can verify.
+
+    **What Chat mode is great for:**
+    - "What did we decide about the pricing model in the Q2 planning doc?"
+    - "Summarize all open tasks assigned to me this week."
+    - "Find every page that mentions the API rate limit."
+    - "Draft a status update for the mobile launch project."
+
+    Chat mode reads the current page you have open, any pages linked from it via `@mentions`, and your task backlog. It does not modify any content — it only reads and responds.
+
+    **How to open Chat mode:**
+    1. Click the **AI** button in the top-right toolbar, or press `Cmd/Ctrl + J`.
+    2. Type your question in the chat input and press `Enter`.
+    3. Jetie AI responds inline. Click any cited page link to jump directly to the source.
+  </Tab>
+  <Tab title="Autopilot Mode">
+    **Autopilot mode** is a semi-autonomous agent that decomposes a high-level goal into concrete tasks and executes multi-step actions across your workspace — with your approval at each stage.
+
+    **What Autopilot mode is great for:**
+    - "Break down the website redesign project into tasks and add them to my Sprint board."
+    - "Create a project page for the new API integration with a roadmap, a decision log, and a task database."
+    - "Find all incomplete tasks past their due date and move them to next week."
+
+    **How Autopilot mode works:**
+    1. Press `Cmd/Ctrl + J` and click **Autopilot** at the top of the AI panel.
+    2. Describe your goal in plain language.
+    3. Jetie AI shows you a **proposed action plan** — a list of every step it intends to take.
+    4. Review the plan. Edit, remove, or reorder steps as needed.
+    5. Click **Run** to execute. Jetie AI works through each step and reports its progress in real time.
+    6. At any point, click **Pause** to stop and review before continuing.
+
+    <Warning>
+      Autopilot mode never executes destructive actions (deleting pages, removing members) without an explicit, separate confirmation prompt — even if the action plan includes them.
+    </Warning>
+  </Tab>
+</Tabs>
+
+## How Jetie AI Stays in Context
+
+The quality of Jetie AI's responses depends on how much relevant context it can see. At any moment, the AI reads from three layers:
+
+| Context layer | What it includes |
+|---|---|
+| **Current page** | The full text and blocks of the page you have open right now. |
+| **Linked pages** | Any pages referenced via `@page-name` links from the current page (one level deep). |
+| **Task backlog** | Your open tasks across all databases in the current workspace, filtered to what is relevant to the query. |
+
+You can explicitly expand the AI's context by opening additional pages before invoking Chat or Autopilot mode, or by using the **Add context** button in the AI panel to pin specific pages or databases to the session.
+
+## Context Memory
+
+Jetie AI remembers the projects and goals you have discussed across sessions, so you do not have to re-explain your situation every time you open a new conversation. Memory is scoped per workspace — the AI's understanding of your team's projects in one workspace does not bleed into another.
+
+For a detailed breakdown of how context memory works, how long it persists, and how to clear or edit remembered information, see the [Context Memory guide](/ai/context-memory).
+
+## Privacy and Data Security
+
+<Note>
+  **Your data is never used to train AI models.** All AI inference runs against an isolated, encrypted snapshot of your workspace content. Jetie does not share your pages, tasks, or documents with any third-party model provider for training purposes. Your workspace data belongs to you.
+</Note>
+
+Additional privacy commitments:
+
+- AI context snapshots are encrypted at rest and in transit.
+- Context snapshots are discarded at the end of each session unless you explicitly enable Context Memory.
+- Workspace Admins can disable the AI assistant entirely under **Settings → AI**.
+- Enterprise customers can opt into a private deployment where AI inference runs within their own cloud boundary.
+
+## Limitations
+
+Jetie AI is powerful, but it has boundaries worth knowing:
+
+<CardGroup cols={2}>
+  <Card title="Approval required for edits" icon="shield-check">
+    The AI cannot modify, create, or delete any content without your explicit approval. Every proposed change appears as a diff you must accept before it is applied.
+  </Card>
+  <Card title="No external browsing" icon="globe">
+    Jetie AI works entirely within your workspace context. It cannot browse the web, access external APIs, or read files outside of Jetie.
+  </Card>
+  <Card title="No billing or settings changes" icon="lock">
+    The AI cannot change workspace settings, manage members, or interact with billing — even in Autopilot mode.
+  </Card>
+  <Card title="Context window limits apply" icon="ruler">
+    Very large workspaces may exceed the AI's context window. Use the **Add context** panel to focus the AI on the most relevant pages when working in large workspaces.
+  </Card>
+</CardGroup>
+
+## Usage Limits by Plan
+
+| Plan | AI Requests per Month | Autopilot Actions per Month |
+|---|---|---|
+| **Free** | 50 | 10 |
+| **Pro** | 500 | 100 |
+| **Business** | Unlimited | Unlimited |
+
+<Tip>
+  An "AI request" counts as one Chat query or one Autopilot plan generation. Individual steps within an approved Autopilot plan do not consume additional requests — only the initial plan generation does.
+</Tip>
+
+<Note>
+  Usage resets on the first day of each calendar month. Pro and Business plan subscribers can monitor current usage under **Settings → AI → Usage**.
+</Note>
